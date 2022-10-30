@@ -14,5 +14,7 @@ I graduated from <b>Beijing No.4 High School </b>in 2019. As a member of Beijing
 
 Outside research and studying, I am a huge fan of soccer, track&field and Formula 1. I spent two wonderful years in Tsinghua Amateur Soccer Team as the key right-back, winning the <b>2020 Beijing University Soccer Championship</b> with my amazing coach and teammates. I was also a member of Tsinghua Amateur Long-distance Race Team.
 
+<b>I am looking for a PhD position starting from Fall 2023.</b>
+
 
 
