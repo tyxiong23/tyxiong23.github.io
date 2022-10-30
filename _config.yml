@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Tianyi Xiong's Homepage"
 title_separator          : "-"
 name                     : &name "Tianyi Xiong"
-description              : &description "personal description"
+description              : &description "Undergraduate student @ THU CS"
 url                      : https://tyxiong23.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : tyxiong23.github.io
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Tianyi Xiong"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Beijing, China"
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
