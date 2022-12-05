@@ -8,13 +8,27 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Tianyi, a senior undergraduate student majoring in [<b><font color="purple">Computer Science</font></b>](https://www.cs.tsinghua.edu.cn/)  and minoring in Statistics at [<b><font color="purple">Tsinghua University</font></b>](https://www.tsinghua.edu.cn/). My research interests cover machine learning and computer vision.  I am especially interested in adapting vision models into the open world with the general knowledge learnt from other modalities (e.g. natural language). Currently I am a remote research intern at mlPC Lab, University of California San Diego with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/).
+Hi! I am Tianyi, a senior undergraduate student majoring in [<b><font color="purple">Computer Science</font></b>](https://www.cs.tsinghua.edu.cn/)  and minoring in Statistics at [<b><font color="purple">Tsinghua University</font></b>](https://www.tsinghua.edu.cn/). My research interests cover machine learning, computer vision and multi-modality.  I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities (e.g. natural language). Currently I am a remote research intern at mlPC Lab, University of California San Diego with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/). Previously, I interned at [The Graphics and Geometric Computing Group, Tsinghua University](https://cg.cs.tsinghua.edu.cn/) under the guidance of [Prof. Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and [Prof. Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm).
 
 I graduated from <b>Beijing No.4 High School </b>in 2019. As a member of Beijing Team, I attended the <b>$35^{th}$ CPhO Final </b>in Shanghai and won a silver medal.
 
-Outside research and studying, I am a huge fan of soccer, track&field and Formula 1. I spent two wonderful years in Tsinghua Amateur Soccer Team as the key right-back, winning the <b>2020 Beijing University Soccer Championship</b> with my amazing coach and teammates. I was also a member of Tsinghua Amateur Long-distance Race Team.
-
 <b>I am looking for a PhD position starting from Fall 2023.</b>
+
+Education
+======
+* High School, Beijing No.4 High School, 2016 - 2019
+* B.Eng. in Computer Science, Tsinghua University, 2019 - 2023 (expected)
+  * Minoring in Statistics, 2020 - 2023 (expected)
+
+Honors & Awards
+======
+* 35th Chinese Physics Olympiad (Final), Second Award (2018)
+* National Scholarship (top 1%, 2020)
+* Rational Physics College Competition, First Award (top 5%, 2020)
+* Outstanding Student of Tsinghua University (top 5%, 2020)
+* Excellent Comprehensive Scholarship of Tsinghua University (top 10%, 2021)
+* Excellent Atheletic Scholarship of Tsinghua University (2022)
+* Excellent Volunteering Scholarship of Tsinghua University (2022)
 
 
 

@@ -7,8 +7,20 @@ author_profile: true
 
 {% include base_path %}
 
-Education
+
+Outside research and studying, I am a huge fan of sports. 
+
+Sports in Tsinghua
 ======
+
+I spent two wonderful years in Tsinghua Amateur Soccer Team as the key right-back, winning the <b>2020 Beijing University Soccer Championship</b> with my amazing coach and teammates. We also won the 2nd place of Beijing in 2021.
+
+![](images/sports.png)
+
+I was also a member of **Tsinghua Amateur Long-distance Race Team**. I won the bronze medal of mens 4x100m relay and the bronze medal of mixed 4x400m relay in 13th Autumn Sports Meeting of Beijing Universities.
+
+<!-- 
+
 * B.S. in GitHub, GitHub University, 2012
 * M.S. in Jekyll, GitHub University, 2014
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
@@ -39,19 +51,4 @@ Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+   -->
