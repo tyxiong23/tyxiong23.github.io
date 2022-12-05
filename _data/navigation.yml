@@ -3,8 +3,6 @@ main:
   - title: "Publications"
     url: /publications/
 
-   
-
   # - title: "Teaching"
   #   url: /teaching/    
     
@@ -17,7 +15,7 @@ main:
   - title: "CV"
     url: /files/CV_Tianyi_Xiong_2022.pdf
   
-   - title: "Misc"
+  - title: "Misc"
     url: /misc/  
     
   # - title: "Guide"
