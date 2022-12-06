@@ -9,7 +9,6 @@ author_profile: true
 
 ## Machine Learning, Perception, and Cognition Lab, <i>University of California, San Diego</i> &emsp; &emsp; <small>07/2022--Present</small>
 **Advisor: Prof. Zhuowen Tu**
-
 - ### Open-Vocabulary Image Segmentation
   - Proposed a universal two-stage framework for panoptic, instance and semantic segmentation.
   - Focused on adapting CLIP's feature space for fine-grained segmentation, and found out an efficient and effective way of finetuning the query projections of CLIP's visual branch.
@@ -18,7 +17,6 @@ author_profile: true
 
 ## Graphics and Geometric Computing Group, <i>Tsinghua University</i> &emsp; &emsp; <small>04/2021--07/2022</small>
 **Advisor: Prof. Shimin Hu and Prof. Songhai Zhang**
-
 - ### Write A Video: Automatic Video Editing System
   - Proposed a three-step to generate well-edited short movies from input videos, simplified user input into text descriptions and choice making.
   - Utilized CLIP for multi-label theme mapping and video clustering.
@@ -27,7 +25,7 @@ author_profile: true
   - Reached comparable results with professional designers in terms of scene plausibility and shopping efficiency in user study. Contributed to a paper **submitted to IEEE VR 2023**.
 - ### Semi-superivised Image Cropping
   - Applied GANs for cropping images into aesthetically composed sub-images. Solved model collapse by adding saliency detection as features of image structure and designing special loss based on prior knowledge of photography.
-## 
+
 
 
 
