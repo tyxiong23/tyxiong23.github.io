@@ -16,7 +16,7 @@ Sports in Tsinghua
 I spent two wonderful years in Tsinghua Amateur Soccer Team as the key right-back, winning the <b>2020 Beijing University Soccer Championship</b> with my amazing coach and teammates. We also won the 2nd place of Beijing in 2021.I was also a member of **Tsinghua Amateur Long-distance Race Team**. I won the bronze medal of mens 4x100m relay and the bronze medal of mixed 4x400m relay in 13th Autumn Sports Meeting of Beijing Universities.
 ![](/images/misc/sports.png)
 
-Department of Computer Science and Technology (also nicknamed <b><font color="red">"酒井"</font></b>) has a good sports atmosphere. As a member of the  <b><font color="red">"酒井"</font></b> team and the captain of our department's running team, I enjoy playing sports and winning with my teammates in the annual <b>John Ma Cup of Tsinghua University</b>. I sincerely hope that we can stay healthy and contribute to our home country for more than 50 years (<b><font color="purple">为祖国健康工作五十年</b></font>)!
+Department of Computer Science and Technology (also nicknamed <b><font color="red">"酒井"</font></b>) has a good sports atmosphere. As a member of the  <b><font color="red">"酒井"</font></b> team and the captain of our department's running team, I enjoy playing sports and winning with my teammates in the annual <b>John Ma Cup of Tsinghua University</b>. I sincerely hope that we can stay healthy and contribute to our home country for more than 50 years (<b><font color="purple">为祖国健康工作五十年</font></b>)!
 ![](/images/misc/sports-cs.png)
 
 Volunteering
