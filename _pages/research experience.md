@@ -26,6 +26,7 @@ author_profile: true
   - Parameterized design plans for commercial places into a set of patterns and constraints, and designed an optimization algorithm based on simulation annealing.
   - Reached comparable results with professional designers in terms of scene plausibility and shopping efficiency in user study. Contributed to a paper **submitted to IEEE VR 2023**.
 - ### Semi-superivised Image Cropping
+  - Applied GANs for cropping images into aesthetically composed sub-images. Solved model collapse by adding saliency detection as features of image structure and designing special loss based on prior knowledge of photography.
 ## 
 
 
