@@ -32,7 +32,7 @@ Honors & Awards
 
 
 
-<div id="sfcfzrn8y582g22ag94bmx8wnuuakc8ewqy"></div>
-<script type="text/javascript" src="https://counter10.optistats.ovh/private/counter.js?c=fzrn8y582g22ag94bmx8wnuuakc8ewqy&down=async" async></script>
-<noscript><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=fzrn8y582g22ag94bmx8wnuuakc8ewqy" border="0" title="free counter" alt="free counter"> visitors since January 2023.</noscript> 
+**Number of visitors since January 2023: **
+
+<a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a> 
 
