@@ -37,5 +37,5 @@ Honors & Awards
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
 
 <p style="text-align: center;">
-  <a href="https://clustrmaps.com/site/1bszs"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&cl=ffffff" style="width:280px" /></a>
+  <a href="https://clustrmaps.com/site/1bszs"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&cl=ffffff" style="margin:15px" /></a>
 </p>
