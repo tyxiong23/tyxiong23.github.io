@@ -24,11 +24,14 @@ Education
   * Minoring in Statistics, 2020 - 2023 
 * Ph.D. in Computer Science, University of Maryland, College Park, 2023 - Present
 
-Honors & Awards
+Selected Honors & Awards
 ======
 * 35th Chinese Physics Olympiad (Final), Second Award (2018)
 * National Scholarship (2020)
 * Excellent Comprehensive Scholarship of Tsinghua University (2021)
+* Person of The Year, Department of Computer Science and Technology (2022)
+* OutStanding Graduate of Department of Computer Science and Technology (2023)
+
 <!-- * Rational Physics College Competition, First Award (top 5%, 2020) -->
 <!-- * Outstanding Student of Tsinghua University (2020) -->
 <!-- * Excellent Atheletic Scholarship of Tsinghua University (2022)

@@ -7,12 +7,12 @@ author_profile: true
 
 {% include base_path %}
 
-## Machine Learning, Perception, and Cognition Lab, <i>University of California, San Diego</i> &emsp; &emsp; <small>07/2022--Present</small>
+## Machine Learning, Perception, and Cognition Lab, <i>University of California, San Diego</i> &emsp; &emsp; <small>07/2022--11/2022</small>
 **Advisor: Prof. Zhuowen Tu**
 - ### Open-Vocabulary Image Segmentation
   - Proposed a universal two-stage framework for panoptic, instance and semantic segmentation.
   - Focused on adapting CLIP's feature space for fine-grained segmentation, and found out an efficient and effective way of finetuning the query projections of CLIP's visual branch.
-  - Outperformed previous works on all three tasks by at least 25%. **Co-first authored a paper submitted to CVPR 2023**.
+  - Outperformed previous works on all three tasks by at least 25%. **Co-first authored a paper to appear in ICCV 2023**.
 
 
 ## Graphics and Geometric Computing Group, <i>Tsinghua University</i> &emsp; &emsp; <small>04/2021--07/2022</small>
