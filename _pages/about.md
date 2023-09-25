@@ -13,11 +13,11 @@ Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, Col
 <b>Research Interest:</b> machine learning, computer vision and multi-modality.  
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
 
-<div style="background-color: #E4F1FF; padding: 1px; margin-top: 5px; margin-bottom: 10px">
-<h3 style="margin-bottom: 2px">News</h3>
+<div style="background-color: #E4F1FF; margin-top: 5px; margin-bottom: 10px">
+<h3 style="margin-bottom: 2px"> News</h3>
 <ul>
   <li>[08/2023] Started my Ph.D. at UMD. </li>
-  <li>[07/2023] MasQCLIP got accepted by ICCV 2023 as poster.</lli>
+  <li>[07/2023] MasQCLIP got accepted by ICCV 2023 as poster.</li>
 </ul>
 </div>
 
