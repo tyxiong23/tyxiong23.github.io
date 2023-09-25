@@ -15,14 +15,14 @@ My research interests cover machine learning, computer vision and multi-modality
 
 
 Education
-------
+======
 <!-- * High School, Beijing No.4 High School, 2016 - 2019 -->
 * B.Eng. in Computer Science, Tsinghua University, 2019 - 2023 (with honor)
   * Minoring in Statistics, 2020 - 2023 
 * Ph.D. in Computer Science, University of Maryland, College Park, 2023 - Present
 
 Selected Honors & Awards
-------
+======
 * 35th Chinese Physics Olympiad (Final), Second Award (2018)
 * National Scholarship (2020)
 * Excellent Comprehensive Scholarship of Tsinghua University (2021)
@@ -36,9 +36,4 @@ Selected Honors & Awards
 
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
 
-<p style="text-align: center;">
-  <!-- <a href="https://clustrmaps.com/site/1bszs"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&cl=ffffff" style="margin:15px; width: 50%" /></a> -->
-  <a href="https://clustrmaps.com/site/1bszs" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=080808&w=500&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=ffffff&ct=808080" style="width:50%; margin-top: 8px"/></a>
-
-</p>
 <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=500&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"></script>
