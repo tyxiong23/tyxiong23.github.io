@@ -28,10 +28,10 @@ Education
 
 Selected Honors & Awards
 ======
-* 35th Chinese Physics Olympiad (Final), Second Award (2018)
+* Second Award, 35th Chinese Physics Olympiad (Final) (2018)
 * National Scholarship (2020)
 * Excellent Comprehensive Scholarship of Tsinghua University (2021)
-<!-- * Outstanding Graduate of Department of Computer Science and Technology, Tsinghua University (2023) -->
+* Outstanding Undergraduate, Tsinghua Computer Science Dept. (2023)
 <!-- * Person of The Year, Department of Computer Science and Technology (2022) -->
 
 
