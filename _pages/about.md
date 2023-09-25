@@ -8,10 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, College Park working with Prof. [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at [Tsinghua University](https://www.tsinghua.edu.cn/). During my undergraduate study, I was fortunate to work with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely), Prof. [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and Prof. [Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm). I was also a research intern at MSRA with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/). <br/>
-My research interests cover machine learning, computer vision and multi-modality.  
+Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, College Park working with Prof. [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at [Tsinghua University](https://www.tsinghua.edu.cn/). During my undergraduate study, I was fortunate to work with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely), Prof. [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and Prof. [Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm). I was also a research intern at MSRA with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/). 
+
+<b>Research Interest:</b> machine learning, computer vision and multi-modality.  
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
 
+<div style="background-color: #E4F1FF; padding: 1px; margin-top: 5px; margin-bottom: 10px">
+<h3 style="margin-bottom: 2px">News</h3>
+<ul>
+  <li>[08/2023] Started my Ph.D. at UMD. </li>
+  <li>[07/2023] MasQCLIP got accepted by ICCV 2023 as poster.</lli>
+</ul>
+</div>
 
 
 Education
@@ -26,7 +34,7 @@ Selected Honors & Awards
 * 35th Chinese Physics Olympiad (Final), Second Award (2018)
 * National Scholarship (2020)
 * Excellent Comprehensive Scholarship of Tsinghua University (2021)
-* Outstanding Graduate of Department of Computer Science and Technology, Tsinghua University (2023)
+<!-- * Outstanding Graduate of Department of Computer Science and Technology, Tsinghua University (2023) -->
 <!-- * Person of The Year, Department of Computer Science and Technology (2022) -->
 
 
@@ -36,4 +44,4 @@ Selected Honors & Awards
 
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
 
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=500&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"></script>
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=500&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353" style="margin-bottom:5px"></script>
