@@ -14,9 +14,9 @@ Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, Col
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
 <div style="background-color: #E4F1FF; margin-top: 0px; margin-bottom: 20px; margin-left: 3px; margin-right: 3px">
 <h2 style="margin-bottom: 4px"> News</h2>
-[08/2023] &nbsp Started my Ph.D. at UMD.<br>
-[07/2023] &nbsp <b>MasQCLIP</b> got accepted by ICCV 2023. <br>
-[07/2023] &nbsp <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23.
+[08/2023] Started my Ph.D. at UMD.<br>
+[07/2023] <b>MasQCLIP</b> got accepted by ICCV 2023. <br>
+[07/2023] <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23.
 </div>
 
 
