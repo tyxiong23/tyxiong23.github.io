@@ -8,11 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, College Park working with Prof. [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at [Tsinghua University](https://www.tsinghua.edu.cn/). During my undergraduate study, I was fortunate to work with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely), Prof. [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and Prof. [Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm). I was also a research intern at MSRA with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/). 
-<p style="margin-top: 0px"><b>Research Interest:</b> machine learning, computer vision and multi-modality. </p>
+Hi! I am Tianyi Xiong, a first-year Ph.D. student at University of Maryland, College Park working with Prof. [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at [Tsinghua University](https://www.tsinghua.edu.cn/). During my undergraduate study, I was fortunate to work with Prof. [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely), Prof. [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and Prof. [Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm). I was also a research intern at MSRA with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/).
+
+<b>Research Interest:</b> machine learning, computer vision and multi-modality.
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
-<div style="background-color: #E4F1FF; margin-top: 0px; margin-bottom: 10px; margin-left: 3px; margin-right: 3px">
-<h3 style="margin-bottom: 4px"> News</h3>
+<div style="background-color: #E4F1FF; margin-top: 0px; margin-bottom: 20px; margin-left: 3px; margin-right: 3px">
+<h2 style="margin-bottom: 4px"> News</h2>
 [08/2023] &nbsp Started my Ph.D. at UMD.<br>
 [07/2023] &nbsp <b>MasQCLIP</b> got accepted by ICCV 2023. <br>
 [07/2023] &nbsp <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23.
