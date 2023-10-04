@@ -1,43 +1,46 @@
 {% include base_path %}
 
 {% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
-  {% assign teaser = site.teaser %}
+{% assign teaser = site.teaser %}
 {% endif %}
 
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-  {% assign title = post.title %}
+{% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="{{ include.type | default: " list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div style="display: flex;">
-      
-      <div class="archive__item-teaser" style="width: 400px;">
+
+      <div class="archive__item-teaser" style="width: 300px;">
         {% if post.teaser %}
         <img src="{{ post.teaser }}" alt="">
-        {% else %}
-        <img src="../images/publications/masqclip2023.png" alt="">
         {% endif %}
       </div>
-      
-      
 
       <div>
-        <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px;">
-          {{title}}
-        </h3>
-      </div>
+        <div>
+          <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px;">
+            {{title}}
+          </h3>
+        </div>
 
-      {% if post.excerpt and site.read_more != 'enabled' %}
-      <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;">{{ post.excerpt | markdownify }}</p>
-      {% elsif post.excerpt and site.read_more == 'enabled' %}
-      <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
-      {% endif %}
-  </div>
+        {% if post.excerpt and site.read_more != 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;">{{ post.excerpt | markdownify
+          }}</p>
+        {% elsif post.excerpt and site.read_more == 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;">
+        <p>{{ post.excerpt | markdownify | remove: '
+        <p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong>
+        </p>
+        </p>
+        {% endif %}
+      </div>
+    </div>
 
   </article>
 </div>

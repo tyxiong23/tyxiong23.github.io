@@ -1,6 +1,6 @@
 ---
 title: "MasQCLIP for Open-Vocabulary Universal Image Segmentation"
-teaser: "/images/publications/masqclip2023.png"
+teaser: "/images/publications/2023-masqclip.png"
 collection: publications
 conference: ICCV 2023
 # permalink: /publication/2009-10-01-paper-title-number-1
