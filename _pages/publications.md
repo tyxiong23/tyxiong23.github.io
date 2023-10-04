@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-<hr>
+<hr style="border-top:3px">
 
 {% for post in site.publications reversed %}
   {% include archive-single-pub.html %}
