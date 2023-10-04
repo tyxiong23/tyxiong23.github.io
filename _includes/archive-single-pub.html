@@ -16,12 +16,12 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div style="display: flex; margin-top: 8px; margin-bottom: 5px;">
       <div>
-        <div class="archive__item-teaser1" style="height: min-content;">
-          {% if post.teaser %}
-          <img src="{{ post.teaser }}" alt="">
-          {% endif %}
-        </div>
+      <div class="archive__item-teaser1">
+        {% if post.teaser %}
+        <img src="{{ post.teaser }}" alt="" >
+        {% endif %}
       </div>
+    </div>
 
       <div style="margin-left: 20px;">
         <div style="margin-bottom: 0px;">
@@ -30,10 +30,10 @@
           </h3>
         </div>
 
-        <!-- {% if post.excerpt and site.read_more != 'enabled' %}
+        {% if post.excerpt and site.read_more != 'enabled' %}
         <p style="margin-top: 0px;">{{ post.excerpt | markdownify
           }}</p>
-        {% endif %} -->
+        {% endif %}
       </div>
     </div>
 
