@@ -1,11 +1,11 @@
 # main links links
 main:
 
-  - title: "Research Experiences"
-    url: /research-experience/
+  # - title: "Research Experiences"
+  #   url: /research-experience/
 
-  # - title: "Publications"
-  #   url: /publications/
+  - title: "Publications"
+    url: /publications/
 
   # - title: "Teaching"
   #   url: /teaching/    
