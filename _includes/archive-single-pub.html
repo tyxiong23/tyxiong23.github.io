@@ -14,35 +14,8 @@
 
 <div class="{{ include.type | default: " list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-      <tr>
-        <td style="padding:14px;width:30%;max-width:30%" align="center">
-          <div class="archive__item-teaserNew">
-            {% if post.teaser %}
-            <img src="{{ post.teaser }}" alt="">
-            {% endif %}
-          </div>
-        </td>
-        <td width="75%" valign="center">
-          <div style="margin-left: 20px; margin-bottom: 0px;">
-            <div style="margin-bottom: 0px;">
-              <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px; margin-top: 0px;">
-                {{title}}
-              </h3>
-            </div>
-    
-            {% if post.excerpt and site.read_more != 'enabled' %}
-            <p style="margin-top: 0px;">{{ post.excerpt | markdownify
-              }}</p>
-            {% endif %}
-          </div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-    <!-- <div  style="margin-top: 12px; margin-bottom: 1px; ;">
-      <div>
+    <div  style="margin-top: 12px; margin-bottom: 1px;">
+      <div style="float: left; width: 25%;">
         <div class="archive__item-teaserNew">
           {% if post.teaser %}
           <img src="{{ post.teaser }}" alt="">
@@ -50,8 +23,19 @@
         </div>
       </div>
 
-      
-    </div> -->
+      <div style="margin-left: 20px; margin-bottom: 0px; float: left;">
+        <div style="margin-bottom: 0px;">
+          <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px; margin-top: 0px;">
+            {{title}}
+          </h3>
+        </div>
+
+        {% if post.excerpt and site.read_more != 'enabled' %}
+        <p style="margin-top: 0px;">{{ post.excerpt | markdownify
+          }}</p>
+        {% endif %}
+      </div>
+    </div>
 
   </article>
 </div>
