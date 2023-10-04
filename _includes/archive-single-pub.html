@@ -15,12 +15,13 @@
 <div class="{{ include.type | default: " list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div style="display: flex; margin-top: 8px; margin-bottom: 5px;">
-
-      <div class="archive__item-teaser1">
+      <div>
+      <div class="archive__item-teaser1" style="height: min-content;">
         {% if post.teaser %}
-        <img src="{{ post.teaser }}" alt="" style="width: 300px; height: fit-content;">
+        <img src="{{ post.teaser }}" alt="" >
         {% endif %}
       </div>
+    </div>
 
       <div style="margin-left: 20px;">
         <div style="margin-bottom: 0px;">
