@@ -30,7 +30,7 @@
         </div>
 
         {% if post.excerpt and site.read_more != 'enabled' %}
-        <p itemprop="description" style="margin-top: 0px;">{{ post.excerpt | markdownify
+        <p style="margin-top: 0px;">{{ post.excerpt | markdownify
           }}</p>
         {% endif %}
       </div>
