@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div style="margin-left: 1%; margin-bottom: 0px; float: left; width: 73%; max-width: 73%;">
+      <div style="margin-left: 2%; margin-bottom: 0px; float: left; width: 73%; max-width: 73%;">
         <div style="margin-bottom: 0px;">
           <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px; margin-top: 0px;">
             {{title}}
@@ -31,7 +31,7 @@
         </div>
 
         {% if post.excerpt and site.read_more != 'enabled' %}
-        <p style="margin-top: 0px;">{{ post.excerpt | markdownify
+        <p style="margin-top: 0px; margin-bottom: 0px;">{{ post.excerpt | markdownify
           }}</p>
         {% endif %}
       </div>
