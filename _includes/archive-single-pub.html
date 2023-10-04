@@ -23,14 +23,14 @@
       </div>
 
       <div style="margin-left: 10px;">
-        <div>
+        <div style="margin-bottom: 0px;">
           <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px; margin-top: 0px;">
             {{title}}
           </h3>
         </div>
 
         {% if post.excerpt and site.read_more != 'enabled' %}
-        <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;">{{ post.excerpt | markdownify
+        <p itemprop="description" style="margin-top: 0px;">{{ post.excerpt | markdownify
           }}</p>
         {% elsif post.excerpt and site.read_more == 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0px;">
