@@ -12,8 +12,8 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if post.collection %}
-  {% assign collection = post.collection %}
+{% if post.teaser %}
+  {% assign teaser = post.teaser %}
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
@@ -31,7 +31,7 @@
     {% endif %}
 
     <div>
-      <h3 class="archive__item-title" itemprop="headline">
+      <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 1px;">
         {{title}}
       </h3>
       <!-- <p>{{collection}}</p> -->
