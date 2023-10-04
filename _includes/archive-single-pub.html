@@ -30,6 +30,16 @@
       </div>
     {% endif %}
 
+    <div class="archive__item-teaser">
+      <img src=
+        {% if teaser contains "://" %}
+          "{{ teaser }}"
+        {% else %}
+          "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+        {% endif %}
+        alt="">
+    </div>
+
     <div>
       <h3 class="archive__item-title" itemprop="headline" style="margin-bottom: 0px;">
         {{title}}
