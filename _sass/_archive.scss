@@ -74,8 +74,20 @@
   }
 }
 
+.archive__item-teaser1 {
+  border-radius: $border-radius;
+  overflow: hidden;
+  img {
+    width: 300px;
+  }
+}
+
 .archive__item:hover {
   .archive__item-teaser {
+    box-shadow: 0 0 10px rgba(#000, 0.25);
+  }
+
+  .archive__item-teaser1 {
     box-shadow: 0 0 10px rgba(#000, 0.25);
   }
 
