@@ -10,4 +10,4 @@ venue: 'Journal 1'
 ---
 [Shao-Kui Zhang](https://shao-kui.github.io/), Jia-Hong Liu, Yi-Ke Li, **Tianyi Xiong**, Ke-Xin Ren, Hongbo Fu, [Song-Hai Zhang](https://scholar.google.com/citations?user=AWtV-EQAAAAJ&hl=en) <br/>
 <i>ACM Multimedia</i>, 2023 <br/>
-[[paper]](https://cg.cs.tsinghua.edu.cn/course/vis/Shao-Kui/cmmercialscene.pdf) / [[project page]](https://github.com/Shao-Kui/3DScenePlatform#commercialscene) / [[video]](https://www.bilibili.com/video/BV1gV4y1i7VN)
+[[paper]](https://dl.acm.org/doi/abs/10.1145/3581783.3613456) / [[project page]](https://github.com/Shao-Kui/3DScenePlatform#commercialscene) / [[video]](https://www.bilibili.com/video/BV1gV4y1i7VN)
