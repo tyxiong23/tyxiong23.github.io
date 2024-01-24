@@ -24,6 +24,10 @@ Volunteering
 Since I was in primary school, I has been volunteering for more than 580 hours. During high school, I served as a volunteer tour guide at the beautiful [Former Residence of Soong Ching-ling](http://www.sql.org.cn/). I was privileged to be a doping control chaperone at Yanqing Sliding Center for Beijing 2022 Winter Olympics. Here are some photos!
 ![](/images/misc/bj2022-small.png)
 
+Significant Other
+======
+A link to my GF: [Zeying Zhu](https://zzylol.github.io/)
+
 <!-- | | |
 |---|---|
 | ![](/images/misc/bj2022-1.jpg) | ![](/images/misc/bj2022-2.jpg)  |
