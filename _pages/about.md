@@ -22,7 +22,6 @@ Previously, I obtained my B.Eng. degree in Computer Science with a minor in Stat
 [08/2023] Started my Ph.D. at UMD.
 [07/2023] <b>MasQCLIP</b> got accepted by ICCV 2023. 
 [07/2023] <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23.
-[]
 </pre>
 
 
