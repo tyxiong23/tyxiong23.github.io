@@ -18,11 +18,12 @@ Previously, I obtained my B.Eng. degree in Computer Science with a minor in Stat
 
 <pre style="font-size:83%; background-color: #ccddff">
 <b style="font-size: 140%">News</b>
+[09/2024] <b>Event3DGS</b> got accepted by CoRL 2024. 
 [06/2024] Joined TikTok/Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
 [08/2023] Started my Ph.D. at UMD.
 [07/2023] <b>MasQCLIP</b> got accepted by ICCV 2023. 
-[07/2023] <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23.
 </pre>
+<!-- [07/2023] <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23. -->
 
 
 
