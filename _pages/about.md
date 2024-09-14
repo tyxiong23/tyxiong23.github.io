@@ -18,7 +18,7 @@ Previously, I obtained my B.Eng. degree in Computer Science with a minor in Stat
 
 <pre style="font-size:83%; background-color: #ccddff">
 <b style="font-size: 140%">News</b>
-[09/2024] Released <a href="https://github.com/LLaVA-VL/LLaVA-NeXT/blob/main/docs/LLaVA_OneVision_Chat.md">LLaVA-OneVision-Chat: Improving Chat with Preference Learning</a>
+[09/2024] 🚀 Released <a href="https://github.com/LLaVA-VL/LLaVA-NeXT/blob/main/docs/LLaVA_OneVision_Chat.md">LLaVA-OneVision-Chat: Improving Chat with Preference Learning</a>
 [09/2024] <a href="https://arxiv.org/abs/2406.02972"><b>Event3DGS</b></a> got accepted by CoRL 2024. 
 [06/2024] Joined TikTok/Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
 [08/2023] Started my Ph.D. at UMD.
