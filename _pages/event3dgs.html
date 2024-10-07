@@ -203,7 +203,7 @@ redirect_from:
                                 frame-based 3DGS reconstruction methods.
                             </p>
                             <p>
-                                To address this challenge, we introduce Event3DGS, an <i>event-based </i> 3DGS
+                                To address this challenge, we introduce Event3DGS, an <i>event-based</i> 3DGS
                                 framework.
                                 By exploiting the exceptional temporal resolution of event cameras, Event3GDS can
                                 reconstruct high-fidelity 3D structure and appearance under high-speed egomotion.
@@ -222,6 +222,7 @@ redirect_from:
         </div>
     </section>
 
+
     <section class="hero is-small">
         <div class="hero-body">
             <div class="columns is-centered has-text-centered">
@@ -232,6 +233,23 @@ redirect_from:
                     <img src="/images/projects/event3dgs/method_event3dgs.png" class="interpolation-image"
                         alt="Interpolate start reference image." />
                     <div class="content has-text-justified" style="font-size:20px;">
+                        <p>
+                            The proposed Event3DGS aims to efficiently reconstruct a 3D scene representation from a given sequence of events (either grayscale or color) under high-speed robot egomotion and low-light conditions. 
+                            <ul>
+                                <li>
+                                    <b>Forming Event Frames</b>: We first utilize a neutralization-aware accumulator--for mitigating the cancellation of positive and negative events--and sparsity-aware sampling strategy--for reconstruction in non-event regions--to process the input event stream into frames.
+                                </li>
+                                <li>
+                                    <b>Event-based Reconsruction</b>: Then, the sampled event frames are utilized as differential supervision between the corresponding rendered views, optimizing the 3D Gaussians to reconstruct sharp structures and apperance from fast egomotion.
+                                </li>
+                                <li>
+                                    <b>Progressive Training for Better Detail</b>: We train Event3DGS progressively to better represent geometric details.
+                                </li>
+                                <li>
+                                    <b>(Optional) Parameter Seperable Apperance refinement</b>: As an optional component, we integrate a few motion-blurred RGB images from an attached frame-based camera into the pipeline.
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
