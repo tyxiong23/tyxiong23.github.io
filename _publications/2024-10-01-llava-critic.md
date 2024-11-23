@@ -1,6 +1,6 @@
 ---
 title: "LLaVA-Critic: Learning to Evaluate Multimodal Models"
-teaser: "https://llava-vl.github.io/blog/2024-10-03-llava-critic/static/images/data_statistics.png"
+# teaser: "https://llava-vl.github.io/blog/2024-10-03-llava-critic/static/images/data_statistics.png"
 collection: publications
 conference: Preprint
 # permalink: /publication/2009-10-01-paper-title-number-1
