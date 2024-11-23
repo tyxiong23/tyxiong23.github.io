@@ -12,4 +12,4 @@ paperurl: 'https://arxiv.org/abs/2406.02972'
 ---
 **Tianyi Xiong**, [Xiyao Wang](https://si0wang.github.io/), Dong Guo, Qinghao Ye, [Haoqi Fan](https://haoqifan.github.io/), [Quanquan Gu](https://web.cs.ucla.edu/~qgu/), [Heng Huang](https://www.cs.umd.edu/~heng/), [Chunyuan Li](https://chunyuan.li/) <br/>
 <i>Arxiv Preprint</i>, 2024 <br/>
-[[paper]](https://arxiv.org/abs/2410.02712) / [[project page]](https://llava-vl.github.io/blog/2024-10-03-llava-critic/)
+[[paper]](https://arxiv.org/abs/2410.02712) / [[project page]](https://llava-vl.github.io/blog/2024-10-03-llava-critic/) / [[huggingface]](https://huggingface.co/collections/lmms-lab/llava-critic-66fe3ef8c6e586d8435b4af8)
