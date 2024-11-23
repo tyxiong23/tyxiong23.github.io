@@ -10,7 +10,7 @@ redirect_from:
 
 Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park working with [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). My research interests are machine learning and computer vision, especially exploring the emerging capacity of vision foundation models and multi-modality.
 
-Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely),  [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm) and [Shimin Hu](https://cg.cs.tsinghua.edu.cn/shimin.htm). I also interned at MSRA with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/).
+Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)).
 
 <!-- <b>Research Interest:</b> machine learning, computer vision and multi-modality. -->
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
@@ -31,7 +31,7 @@ Previously, I obtained my B.Eng. degree in Computer Science with a minor in Stat
     [09/2024] <a href="https://arxiv.org/abs/2406.02972"><b>Event3DGS</b></a> got accepted by CoRL 2024. 
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [06/2024] Joined TikTok/Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
+    [06/2024] Joined Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
     [08/2023] Started my Ph.D. at UMD.
