@@ -21,6 +21,9 @@ Previously, I obtained my B.Eng. degree in Computer Science with a minor in Stat
   </div>
 
   <div style="max-height:200px; overflow-y: auto; background-color: #f9f9f9;">
+  <p style="margin-top:1px; margin-bottom:1px">
+    [01/2025] Joined NVIDIA LDR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>.
+    </p>
     <p style="margin-top:1px; margin-bottom:1px">
     [09/2024] 🚀 Released <b><a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/">LLaVA-Critic</a></b>, the first open-source LMM as a general evaluator for assessing model performance across diverse multimodal scenarios.
     </p>
