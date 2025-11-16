@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park working with [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). My research interests are machine learning and computer vision, especially exploring the emerging capacity of vision foundation models and multi-modality.
+Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park working with [Heng Huang](https://scholar.google.com/citations?user=4OqLaDwAAAAJ&hl=en). My research interests lie in computer vision and multimodal foundation models, particularly in developing strong critic and reasoning capabilities, improving multimodal alignment, and advancing RL-based post-training methods.
 
-Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)).
+<!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
 <span style="color:red">I am actively seeking research internship opportunities for Summer 2026.</span> Feel free to contact me if you believe I would be a good fit!
 
@@ -69,10 +69,25 @@ Selected Honors & Awards
 * Dean's Fellowship, University of Maryland (2023-24)
 <!-- * Person of The Year, Department of Computer Science and Technology (2022) -->
 
-<div style="display:flex; justify-content:center; align-items:center; gap:30px; margin:20px 0;">
-  <img src="files/image/nvidia-logo.png" alt="NVIDIA" style="height:50px;">
-  <img src="/Users/txiong23/Documents/programming/tyxiong23.github.io/files/image/bytedance-logo.jpg" alt="ByteDance" style="height:50px;">
-  <img src="/Users/txiong23/Documents/programming/tyxiong23.github.io/files/image/Microsoft-Logo.png" alt="MSRA" style="height:50px;">
+
+
+
+Industry Experience
+======
+* NVIDIA Research (2025/02 - 2025/08)
+  - Mentor: [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)
+* ByteDance Seed (2024/06 - 2024/11)
+  - Mentor: [Chunyuan Li](https://chunyuan.li/)
+* Microsoft Research Asia
+  - Mentor: [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)
+
+
+<div style="width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; padding:20px 0;">
+  <div style="display:flex; justify-content:center; align-items:center; gap:50px; width:100%; padding:10px 0;">
+    <img src="files/image/nvidia-logo.png" alt="NVIDIA" style="height:60px;">
+    <img src="files/image/bytedance-logo.jpg" alt="ByteDance" style="height:60px;">
+    <img src="files/image/Microsoft-Logo.png" alt="MSRA" style="height:60px;">
+  </div>
 </div>
 
 
