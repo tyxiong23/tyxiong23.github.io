@@ -11,5 +11,5 @@ paperurl: 'https://arxiv.org/abs/2406.02972'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 **Tianyi Xiong**\*, Yi Ge\*, Ming Li, Zuolong Zhang, Pranav Kulkarni, Kaishen Wang, Qi He, Zeying Zhu, Chenxi Liu, Ruibo Chen, Tong Zheng, Yanshuo Chen, Xiyao Wang, Renrui Zhang, Wenhu Chen, Heng Huang <br/>
-<i>arxiv preprint</i>, 2025 <br/>
+<i>arxiv preprint</i>, 2025 
 [[paper]](https://arxiv.org/abs/2511.21662) / [[project page]](https://multi-crit.github.io/) / [[code]](https://github.com/tyxiong23/Multi-Crit)
