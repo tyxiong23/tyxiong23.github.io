@@ -12,7 +12,7 @@ Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park w
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
-<span style="color:red">I am actively seeking research internship opportunities for Summer 2026.</span> Feel free to contact me if you believe I would be a good fit!
+<!-- <span style="color:red">I am actively seeking research internship opportunities for Summer 2026.</span> Feel free to contact me if you believe I would be a good fit! -->
 
 <!-- <b>Research Interest:</b> machine learning, computer vision and multi-modality. -->
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
