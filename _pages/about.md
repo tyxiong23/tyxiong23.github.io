@@ -24,11 +24,14 @@ Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park w
 
   <div style="max-height:200px; overflow-y: auto; background-color: #f9f9f9;">
     <p style="margin-top:1px; margin-bottom:1px">
+    [02/2025] <a href="https://multi-crit.github.io/"><b>Multi-Crit</b></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><b>PhyCritic</b></a> got accepted by CVPR 2025.
+    </p>
+    <p style="margin-top:1px; margin-bottom:1px">
     [02/2025] <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><b>LLaVA-Critic</b></a> got accepted by CVPR 2025.
     </p>
-    <!-- <p style="margin-top:1px; margin-bottom:1px">
-    [01/2025] Joined NVIDIA LDR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>.
-    </p> -->
+    <p style="margin-top:1px; margin-bottom:1px">
+    [01/2025] Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.
+    </p>
     <p style="margin-top:1px; margin-bottom:1px">
     [09/2024] 🚀 Released <b><a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/">LLaVA-Critic</a></b>, the first open-source LMM as a general evaluator for assessing model performance across diverse multimodal scenarios.
     </p>

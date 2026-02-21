@@ -11,7 +11,7 @@ paperurl: 'https://arxiv.org/abs/2602.11124'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 **Tianyi Xiong**, Shihao Wang, Guilin Liu, Yi Dong, Ming Li, Heng Huang, Jan Kautz, Zhiding Yu <br/>
-<i>arxiv preprint</i>, 2026
+<i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2026 <br/>
 [[paper]](https://arxiv.org/abs/2602.11124) / [[project page]](https://research.nvidia.com/labs/lpr/phycritic//)
 <br/>
 <br/>
