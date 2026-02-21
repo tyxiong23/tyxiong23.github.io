@@ -24,13 +24,13 @@ Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park w
 
   <div style="max-height:200px; overflow-y: auto; background-color: #f9f9f9;">
     <p style="margin-top:1px; margin-bottom:1px">
-    [02/2025] <a href="https://multi-crit.github.io/"><b>Multi-Crit</b></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><b>PhyCritic</b></a> got accepted by CVPR 2025.
+    [02/2026] 🔥 <a href="https://multi-crit.github.io/"><b>Multi-Crit</b></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><b>PhyCritic</b></a> got accepted by CVPR 2026.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [02/2025] <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><b>LLaVA-Critic</b></a> got accepted by CVPR 2025.
+    [02/2025] 🔥 <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><b>LLaVA-Critic</b></a> got accepted by CVPR 2025.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [01/2025] Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.
+    [01/2025] 💼 Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
     [09/2024] 🚀 Released <b><a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/">LLaVA-Critic</a></b>, the first open-source LMM as a general evaluator for assessing model performance across diverse multimodal scenarios.
@@ -39,16 +39,16 @@ Hi! I am Tianyi Xiong, a Ph.D. student at University of Maryland, College Park w
     [09/2024] 🚀 Released <a href="https://github.com/LLaVA-VL/LLaVA-NeXT/blob/main/docs/LLaVA_OneVision_Chat.md">LLaVA-OneVision-Chat: Improving Chat with Preference Learning</a>
     </p> -->
     <p style="margin-top:1px; margin-bottom:1px">
-    [09/2024] <a href="https://arxiv.org/abs/2406.02972"><b>Event3DGS</b></a> got accepted by CoRL 2024. 
+    [09/2024] 🔥 <a href="https://arxiv.org/abs/2406.02972"><b>Event3DGS</b></a> got accepted by CoRL 2024. 
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [06/2024] Joined Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
+    [06/2024] 💼 Joined Bytedance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [08/2023] Started my Ph.D. at UMD.
+    [08/2023] 💼 Started my Ph.D. at UMD.
     </p>
     <p style="margin-top:1px; margin-bottom:1px">
-    [07/2023] <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_MasQCLIP_for_Open-Vocabulary_Universal_Image_Segmentation_ICCV_2023_paper.html"><b>MasQCLIP</b></a> got accepted by ICCV 2023. 
+    [07/2023] 🔥 <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_MasQCLIP_for_Open-Vocabulary_Universal_Image_Segmentation_ICCV_2023_paper.html"><b>MasQCLIP</b></a> got accepted by ICCV 2023. 
     </p>
   </div>
 </div>
