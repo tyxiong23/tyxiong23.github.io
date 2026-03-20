@@ -41,6 +41,11 @@ a {
 .greedy-nav {
   background: transparent;
 
+  button.hidden,
+  button[count="0"] {
+    display: none;
+  }
+
   a {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
