@@ -12,7 +12,7 @@ redirect_from:
 
 <p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
 
-<p>If you are interested in collaborations or would like to learn more about my work, please feel free to reach out to me.</p>
+<p>If you are interested in collaborations or would like to learn more about my work, feel free to contact me! 😄</p>
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
