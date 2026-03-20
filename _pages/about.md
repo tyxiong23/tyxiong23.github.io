@@ -104,7 +104,7 @@ redirect_from:
     </li>
     <li class="home-list__experience">
       <div class="home-list__logo">
-        <img src="files/image/bytedance-logo.jpg" alt="ByteDance">
+        <img src="files/image/bytedance-logo.png" alt="ByteDance">
       </div>
       <div class="home-list__content">
         <strong>ByteDance Seed</strong>
