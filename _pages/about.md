@@ -129,9 +129,8 @@ redirect_from:
 
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
 
-## Visitor Map
+<!-- ## Visitor Map
 
 <section class="home-section home-map">
-  <!-- <p class="home-map__title">Visitor map</p> -->
   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=6a746f&w=640&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=f8f5f0&ct=6a746f&cmo=5f7c74&cmn=c98e72" style="margin-bottom:1px"></script>
-</section>
+</section> -->
