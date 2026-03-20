@@ -93,6 +93,14 @@ a {
   display: none;
 }
 
+.page--home {
+  @include breakpoint($large) {
+    @include span(9.9 of 12 last);
+    @include prefix(0.1 of 12);
+    @include suffix(0 of 12);
+  }
+}
+
 .page--home .page__content > p:first-of-type {
   margin-top: 0;
 }
@@ -125,7 +133,7 @@ a {
   }
 
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
   }
 
   ul,
@@ -217,8 +225,8 @@ a {
 }
 
 .home-news {
-  margin: 1rem 0 0;
-  padding: 0.75rem 1rem 0.3rem;
+  margin: 1.3rem 0 0;
+  padding: 0.3rem 1rem 0.3rem;
   border: 1px solid rgba(95, 107, 102, 0.12);
   border-radius: 18px;
   background: rgba(252, 251, 248, 0.96);
@@ -254,6 +262,7 @@ a {
   padding: 0.45rem 0;
   border-top: 1px solid rgba(95, 107, 102, 0.1);
   line-height: 1.55;
+  background: rgba(255, 255, 255, 0.48);
 
   &:first-child {
     padding-top: 0;
