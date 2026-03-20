@@ -30,7 +30,6 @@ If you are interested in collaborations or would like to learn more about my wor
 <section class="home-news" aria-labelledby="news-title">
   <div class="home-news__header">
     <h2 id="news-title" class="home-news__title">News</h2>
-    <span class="home-news__hint">Recent updates</span>
   </div>
   <ul class="home-news__list">
     <li class="home-news__item"><span class="home-news__date">02/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><strong>PhyCritic</strong></a> got accepted by CVPR 2026.</li>
@@ -77,29 +76,36 @@ If you are interested in collaborations or would like to learn more about my wor
 
 <section class="home-section">
   <ul class="home-list">
-    <li>
-      <strong>NVIDIA Research</strong>
-      <span class="home-list__meta">2025/02 - 2025/08</span>
-      <span class="home-list__meta">Mentors: <a href="https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a>, and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a></span>
+    <li class="home-list__experience">
+      <div class="home-list__logo">
+        <img src="files/image/nvidia-logo.png" alt="NVIDIA">
+      </div>
+      <div class="home-list__content">
+        <strong>NVIDIA Research</strong>
+        <span class="home-list__meta">2025/02 - 2025/08</span>
+        <span class="home-list__meta">Mentors: <a href="https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a>, and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a></span>
+      </div>
     </li>
-    <li>
-      <strong>ByteDance Seed</strong>
-      <span class="home-list__meta">2024/06 - 2024/11</span>
-      <span class="home-list__meta">Mentor: <a href="https://chunyuan.li/">Chunyuan Li</a></span>
+    <li class="home-list__experience">
+      <div class="home-list__logo">
+        <img src="files/image/bytedance-logo.jpg" alt="ByteDance">
+      </div>
+      <div class="home-list__content">
+        <strong>ByteDance Seed</strong>
+        <span class="home-list__meta">2024/06 - 2024/11</span>
+        <span class="home-list__meta">Mentor: <a href="https://chunyuan.li/">Chunyuan Li</a></span>
+      </div>
     </li>
-    <li>
-      <strong>Microsoft Research Asia</strong>
-      <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Steve Lin</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Zhirong Wu</a></span>
+    <li class="home-list__experience">
+      <div class="home-list__logo">
+        <img src="files/image/Microsoft-Logo.png" alt="Microsoft Research">
+      </div>
+      <div class="home-list__content">
+        <strong>Microsoft Research Asia</strong>
+        <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Steve Lin</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Zhirong Wu</a></span>
+      </div>
     </li>
   </ul>
-
-  <div class="home-logo-strip" aria-label="Industry logos">
-    <div class="home-logo-strip__inner">
-      <div class="home-logo-strip__item"><img src="files/image/nvidia-logo.png" alt="NVIDIA"></div>
-      <div class="home-logo-strip__item"><img src="files/image/bytedance-logo.jpg" alt="ByteDance"></div>
-      <div class="home-logo-strip__item"><img src="files/image/Microsoft-Logo.png" alt="Microsoft Research"></div>
-    </div>
-  </div>
 </section>
 
 
