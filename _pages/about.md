@@ -8,17 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-<section class="home-hero">
-  <div class="home-hero__eyebrow">Computer Vision · Multimodal AI</div>
-  <p class="home-hero__lead">
-    Hi, I am Tianyi Xiong, a Ph.D. student at the University of Maryland, College Park.
-  </p>
-  <p class="home-hero__summary">
-    My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.
-  </p>
-</section>
+<p>Hi, I am Tianyi Xiong, a Ph.D. student at the University of Maryland, College Park.</p>
 
-If you are interested in collaborations or would like to learn more about my work, please feel free to reach out to me.
+<p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
+
+<p>If you are interested in collaborations or would like to learn more about my work, please feel free to reach out to me.</p>
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
@@ -48,14 +42,20 @@ If you are interested in collaborations or would like to learn more about my wor
 
 <section class="home-section">
   <ul class="home-list">
-    <li>
-      <strong>B.Eng. in Computer Science, Tsinghua University</strong>
-      <span class="home-list__meta">2019 - 2023, with honor</span>
-      <span class="home-list__meta">Minor in Statistics, 2020 - 2023</span>
+    <li class="home-list__education">
+      <div class="home-list__marker" aria-hidden="true">-</div>
+      <div class="home-list__content">
+        <strong>B.Eng. in Computer Science, Tsinghua University</strong>
+        <span class="home-list__meta">2019 - 2023, with honor</span>
+        <span class="home-list__meta">Minor in Statistics, 2020 - 2023</span>
+      </div>
     </li>
-    <li>
-      <strong>Ph.D. in Computer Science, University of Maryland, College Park</strong>
-      <span class="home-list__meta">2023 - Present</span>
+    <li class="home-list__education">
+      <div class="home-list__marker" aria-hidden="true">-</div>
+      <div class="home-list__content">
+        <strong>Ph.D. in Computer Science, University of Maryland, College Park</strong>
+        <span class="home-list__meta">2023 - Present</span>
+      </div>
     </li>
   </ul>
 </section>
@@ -64,10 +64,26 @@ If you are interested in collaborations or would like to learn more about my wor
 
 <section class="home-section">
   <ul class="home-list home-list--compact">
-    <li>Second Award, 35th Chinese Physics Olympiad (Final) <span class="home-list__meta">2018</span></li>
-    <li>National Scholarship <span class="home-list__meta">2020</span></li>
-    <li>Outstanding Undergraduate, Tsinghua Computer Science Dept. <span class="home-list__meta">2023</span></li>
-    <li>Dean's Fellowship, University of Maryland <span class="home-list__meta">2023 - 2024</span></li>
+    <li class="home-list__award">
+      <span class="home-list__bullet" aria-hidden="true">•</span>
+      <span class="home-list__award-text">Second Award, 35th Chinese Physics Olympiad (Final)</span>
+      <span class="home-list__award-year">2018</span>
+    </li>
+    <li class="home-list__award">
+      <span class="home-list__bullet" aria-hidden="true">•</span>
+      <span class="home-list__award-text">National Scholarship</span>
+      <span class="home-list__award-year">2020</span>
+    </li>
+    <li class="home-list__award">
+      <span class="home-list__bullet" aria-hidden="true">•</span>
+      <span class="home-list__award-text">Outstanding Undergraduate, Tsinghua Computer Science Dept.</span>
+      <span class="home-list__award-year">2023</span>
+    </li>
+    <li class="home-list__award">
+      <span class="home-list__bullet" aria-hidden="true">•</span>
+      <span class="home-list__award-text">Dean's Fellowship, University of Maryland</span>
+      <span class="home-list__award-year">2023 - 2024</span>
+    </li>
   </ul>
 </section>
 <!-- * Person of The Year, Department of Computer Science and Technology (2022) -->
@@ -98,7 +114,7 @@ If you are interested in collaborations or would like to learn more about my wor
     </li>
     <li class="home-list__experience">
       <div class="home-list__logo">
-        <img src="files/image/Microsoft-Logo.png" alt="Microsoft Research">
+        <img src="files/image/Microsoft_logo.svg" alt="Microsoft Research">
       </div>
       <div class="home-list__content">
         <strong>Microsoft Research Asia</strong>
@@ -113,7 +129,7 @@ If you are interested in collaborations or would like to learn more about my wor
 
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
 
-<section class="home-map">
+<section class="home-section home-map">
   <p class="home-map__title">Visitor map</p>
   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=6a746f&w=640&t=tt&d=ed1O3VUhWicV-gqtsVI9SXYPS34TXIL_XqCAW8-77B0&co=f8f5f0&ct=6a746f&cmo=5f7c74&cmn=c98e72" style="margin-bottom:1px"></script>
 </section>
