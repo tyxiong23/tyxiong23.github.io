@@ -26,6 +26,7 @@ redirect_from:
     <h2 id="news-title" class="home-news__title">News</h2>
   </div>
   <ul class="home-news__list">
+    <li class="home-news__item"><span class="home-news__date">04/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> is selected as a <span style="color:red"><strong>Highlight</strong></span> paper at CVPR 2026.</li>
     <li class="home-news__item"><span class="home-news__date">02/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><strong>PhyCritic</strong></a> got accepted by CVPR 2026.</li>
     <li class="home-news__item"><span class="home-news__date">02/2025</span> <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><strong>LLaVA-Critic</strong></a> got accepted by CVPR 2025.</li>
     <li class="home-news__item"><span class="home-news__date">02/2025</span> Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.</li>
