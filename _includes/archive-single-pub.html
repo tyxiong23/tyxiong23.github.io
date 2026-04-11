@@ -15,13 +15,13 @@
 <div class="{{ include.type | default: " list" }}__item" style="margin-top: 5px; margin-bottom: 10px;">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div >
-      <div style="float: left; width: 25%;">
-        <div class="archive__item-teaserNew" style="position: relative;">
+      <div style="float: left; width: 25%; position: relative;">
+        {% if post.highlight %}
+        <div style="position: absolute; top: 0px; left: -10px; z-index: 10; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 3px 8px; font-size: 13px; font-weight: bold; color: #856404; line-height: 1.5; box-shadow: 0 1px 4px rgba(0,0,0,0.15);">🌟 Highlight</div>
+        {% endif %}
+        <div class="archive__item-teaserNew">
           {% if post.teaser %}
           <img src="{{ post.teaser }}" alt="">
-          {% endif %}
-          {% if post.highlight %}
-          <div style="position: absolute; top: 0px; left: -10px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 3px 8px; font-size: 13px; font-weight: bold; color: #856404; line-height: 1.5; box-shadow: 0 1px 4px rgba(0,0,0,0.15);">🌟 Highlight</div>
           {% endif %}
         </div>
       </div>
