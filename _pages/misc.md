@@ -54,8 +54,6 @@ I look forward to running in more places around the world and am always happy to
 
 | Date  | Event                                      | Finish Time |
 |-------|-------------------------------------------|-------------|
-| 03/21 | Rock ’n’ Roll DC Half Marathon            | 1:35:22     |
-| 04/04 | Salisbury Marathon                        | TBD         |
 | 07/22 | San Francisco Marathon (First Half)       | TBD         |
 | 12/06 | California International Marathon (CIM)   | TBD         |
 
