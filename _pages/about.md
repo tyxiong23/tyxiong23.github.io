@@ -101,7 +101,7 @@ redirect_from:
       <div class="home-list__content">
         <strong>Microsoft Research</strong>
         <span class="home-list__meta">2025/12 - 2026/5</span>
-        <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Zhengyuan Yang</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Lijuan Wang</a></span>
+        <span class="home-list__meta">Mentors: <a href="https://zyang-ur.github.io/">Zhengyuan Yang</a> and <a href="https://www.microsoft.com/en-us/research/people/lijuanw/">Lijuan Wang</a></span>
       </div>
     </li>
     <li class="home-list__experience">
