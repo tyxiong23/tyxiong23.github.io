@@ -96,6 +96,16 @@ redirect_from:
   <ul class="home-list">
     <li class="home-list__experience">
       <div class="home-list__logo">
+        <img src="files/image/Microsoft_logo.svg" alt="Microsoft Research">
+      </div>
+      <div class="home-list__content">
+        <strong>Microsoft Research</strong>
+        <span class="home-list__meta">2025/12 - 2026/5</span>
+        <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Zhengyuan Yang</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Lijuan Wang</a></span>
+      </div>
+    </li>
+    <li class="home-list__experience">
+      <div class="home-list__logo">
         <img src="files/image/nvidia-logo.png" alt="NVIDIA">
       </div>
       <div class="home-list__content">
@@ -120,6 +130,7 @@ redirect_from:
       </div>
       <div class="home-list__content">
         <strong>Microsoft Research Asia</strong>
+        <span class="home-list__meta">2023/01 - 2023/14</span>
         <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Steve Lin</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Zhirong Wu</a></span>
       </div>
     </li>
