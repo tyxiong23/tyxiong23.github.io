@@ -26,6 +26,7 @@ redirect_from:
     <h2 id="news-title" class="home-news__title">News</h2>
   </div>
   <ul class="home-news__list">
+    <li class="home-news__item"><span class="home-news__date">06/2026</span> Joined Meta MSL as a research intern with <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a>.</li>
     <li class="home-news__item"><span class="home-news__date">05/2026</span> Receive the <b>Silver Reviewer Award</b> from ICML 2026.</li>
     <li class="home-news__item"><span class="home-news__date">04/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> is selected as a <span style="color:red"><strong>Highlight</strong></span> paper at CVPR 2026.</li>
     <li class="home-news__item"><span class="home-news__date">02/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><strong>PhyCritic</strong></a> got accepted by CVPR 2026.</li>
