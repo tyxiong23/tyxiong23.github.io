@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===================================================================
+       NOT INDEXED BY SEARCH ENGINES until the paper is public.
+       Remove the <meta name="robots"> line below after the arXiv release.
+       =================================================================== -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <title>RubSE: Rubrics as Visual-Repair Context for Self-Evolving UI-to-Code Generation</title>
+  <meta name="description"
+    content="RubSE turns visual feedback into typed, single-target rubrics that steer test-time self-evolution for UI-to-code generation.">
+  <meta property="og:title" content="RubSE: Rubrics as Visual-Repair Context for Self-Evolving UI-to-Code Generation">
+  <meta property="og:description"
+    content="Rubric-guided self-evolution (EVOLVE - SELECT - HISTORY) makes test-time UI-to-code refinement stable and localized.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128221;</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #12151c;
+      --ink-2: #3d4557;
+      --ink-3: #6b7386;
+      --line: #e4e7ee;
+      --line-2: #eef0f5;
+      --bg: #ffffff;
+      --bg-2: #f7f8fb;
+      --bg-3: #f1f3f8;
+      --accent: #4338ca;
+      --accent-soft: #eef0fe;
+      --accent-2: #b45309;
+      --accent-2-soft: #fdf3e3;
+      --ok: #0f766e;
+      --bad: #b91c1c;
+      --radius: 14px;
+      --maxw: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    html, body { overflow-x: hidden; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .wrap.wide { max-width: 1260px; }
+    .narrow { max-width: 860px; margin-left: auto; margin-right: auto; }
+
+    section { padding: 58px 0; border-top: 1px solid var(--line-2); }
+    section.alt { background: var(--bg-2); }
+
+    h2.sec {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+      text-align: center;
+    }
+
+    .sec-kicker {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 12px;
+    }
+
+    .sec-lead {
+      text-align: center;
+      color: var(--ink-2);
+      max-width: 720px;
+      margin: 0 auto 34px;
+      font-size: 17px;
+    }
+
+    h3.sub-lg {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-align: center;
+      margin: 52px 0 8px;
+    }
+
+    h3.sub {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 21px;
+      font-weight: 600;
+      margin: 40px 0 10px;
+    }
+
+    p { margin: 0 0 16px; }
+
+    img { max-width: 100%; }
+
+    .fig { margin: 26px 0 0; }
+    .fig-frame img { width: 100%; height: auto; display: block; }
+    .fig-frame {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 14px;
+      overflow: hidden;
+    }
+    .cap {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-3);
+      margin: 14px auto 0;
+      max-width: 860px;
+      text-align: left;
+    }
+    .cap b { color: var(--ink-2); }
+
+    /* ---------- hero ---------- */
+    header.hero { padding: 62px 0 12px; text-align: center; border: 0; }
+
+    .badge {
+      display: inline-block;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 6px 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: clamp(29px, 4.4vw, 45px);
+      line-height: 1.16;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 auto 8px;
+      max-width: 15.5em;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--ink-2);
+      max-width: 640px;
+      margin: 0 auto 26px;
+    }
+    .subtitle b { color: var(--accent); font-weight: 600; }
+
+    .authors {
+      font-size: 17px;
+      line-height: 2.05;
+      max-width: 880px;
+      margin: 0 auto 12px;
+      color: var(--ink);
+    }
+    .authors a { color: var(--ink); border-bottom: 1px solid var(--line); }
+    .authors a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+    .authors sup { color: var(--accent); font-size: 12.5px; font-weight: 600; }
+
+    .affil { font-size: 15.5px; color: var(--ink-2); margin: 0 0 4px; }
+    .affil sup { color: var(--accent); font-weight: 600; }
+    .note { font-size: 14px; color: var(--ink-3); margin: 0; }
+
+    .links { display: flex; flex-wrap: wrap; gap: 11px; justify-content: center; margin: 28px 0 6px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: 500;
+      border: 1px solid var(--ink);
+      transition: transform .12s ease, background .12s ease;
+    }
+    .btn:hover { background: #000; text-decoration: none; transform: translateY(-1px); }
+    .btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .btn.muted {
+      background: #fff;
+      color: var(--ink-3);
+      border-color: var(--line);
+      cursor: default;
+    }
+    .btn.muted:hover { transform: none; background: #fff; }
+
+    /* ---------- teaser ---------- */
+    .teaser-panel {
+      background: linear-gradient(180deg, #f8f9ff 0%, #f1f3fb 100%);
+      border: 1px solid #e6e9f5;
+      border-radius: 20px;
+      padding: 24px 24px 22px;
+    }
+    .teaser-panel .rubric { background: #fff; }
+
+    .teaser-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+    .shot { display: block; }
+    .shot .box {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      height: 168px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 6px;
+    }
+    .shot img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+    .shot .lbl {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin-top: 9px;
+      letter-spacing: 0.01em;
+    }
+    .shot.gt .box { border-color: #cfd4e2; background: var(--bg-3); }
+    .shot.win .box { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .shot.win .lbl { color: var(--accent); }
+    .shot.bad .box { border-color: #f0c7c7; }
+
+    /* ---------- rubric card ---------- */
+    .rubric {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      background: #fff;
+      padding: 15px 18px;
+    }
+    .rubric .rt {
+      font-weight: 600;
+      font-size: 15.5px;
+      margin: 0 0 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px;
+    }
+    .rubric .rd { font-size: 15px; color: var(--ink-2); margin: 0; line-height: 1.6; }
+
+    .chip {
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .t-layout { background: #eef0fe; color: #4338ca; }
+    .t-spacing { background: #e6f5f2; color: #0f766e; }
+    .t-typo { background: #fdf3e3; color: #b45309; }
+    .t-style { background: #fdeaee; color: #be123c; }
+    .t-complete { background: #eff3e9; color: #4d7c0f; }
+
+    /* ---------- cards ---------- */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 21px;
+    }
+    .card h4 {
+      margin: 0 0 9px;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card .step {
+      width: 24px; height: 24px; border-radius: 6px;
+      background: var(--accent-soft); color: var(--accent);
+      font-size: 13px; font-weight: 700;
+      display: inline-flex; align-items: center; justify-content: center;
+      letter-spacing: 0;
+    }
+    .card p { margin: 0; font-size: 15.5px; color: var(--ink-2); }
+    .card code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 13px;
+      background: var(--bg-3);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: var(--ink);
+    }
+
+    /* highlights */
+    .hl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .hl .card { border-top: 3px solid var(--accent); }
+    .hl h4 { color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 16.5px; font-weight: 600; }
+
+    /* stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 8px; }
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .stat .n {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat .l { font-size: 13.5px; color: var(--ink-2); margin-top: 6px; line-height: 1.45; }
+
+    /* ---------- tables ---------- */
+    .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+    table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+    thead th {
+      font-weight: 600;
+      color: var(--ink-2);
+      padding: 9px 10px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-2);
+      white-space: nowrap;
+    }
+    thead tr:first-child th { border-bottom: 1px solid var(--line-2); }
+    th.lft, td.lft { text-align: left; }
+    tbody td { padding: 7px 10px; text-align: center; border-bottom: 1px solid var(--line-2); white-space: nowrap; }
+    tbody td:nth-child(2), tbody td.lft { text-align: left; }
+    tbody tr.grp-start td, tbody tr.grp-start th { border-top: 1px solid var(--line); }
+    tbody th.model {
+      text-align: left;
+      font-weight: 600;
+      padding: 7px 14px 7px 14px;
+      vertical-align: middle;
+      border-bottom: 1px solid var(--line-2);
+      white-space: nowrap;
+    }
+    td.best { font-weight: 700; color: var(--ink); }
+    td.second { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b9c0d0; }
+    td.ours { color: var(--accent); }
+    td.ours b { font-weight: 600; }
+    .rnd { font-size: 10.5px; color: var(--ink-3); vertical-align: sub; margin-left: 1px; font-weight: 400; }
+    .sep-l { border-left: 1px solid var(--line-2); }
+
+    .legend { font-size: 13.5px; color: var(--ink-3); margin-top: 12px; }
+
+    /* ---------- qualitative viewer ---------- */
+    .viewer { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+    .rounds { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin-bottom: 18px; }
+    .rbtn {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 7px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink-2);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .12s ease;
+    }
+    .rbtn:hover { border-color: var(--accent); color: var(--accent); }
+    .rbtn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    .panes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 16px; }
+    .panes .pane.target { grid-row: span 2; align-self: center; }
+    .panes.no-prev .pane.prev { display: none; }
+    .panes.no-prev .pane.target { grid-row: auto; align-self: stretch; }
+    .pane.prev .head { color: var(--ink-3); }
+    .pane.prev .imgbox { border-style: dashed; background: var(--bg-2); }
+    .pane.prev img { opacity: .82; }
+    .pane .head {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 15px; font-weight: 600; color: var(--ink-2); margin-bottom: 8px;
+    }
+    .pane .head .tag { font-size: 12.5px; font-weight: 500; color: var(--ink-3); }
+    .pane .imgbox {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      aspect-ratio: 16 / 9;
+    }
+    .pane img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .pane.target .imgbox { border-color: #cfd4e2; }
+    .pane.ours .imgbox { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .pane.ours .head { color: var(--accent); }
+
+    .pane.cur .head span:first-child::before {
+      content: '\2192';
+      color: var(--ink-3);
+      font-weight: 400;
+      margin-right: 7px;
+    }
+    .panes.no-prev .pane.cur .head span:first-child::before { content: none; }
+
+    .viewer .rubric { margin-top: 16px; }
+    .rubric.empty { border-left-color: var(--line); }
+    .hint { text-align: center; font-size: 13px; color: var(--ink-3); margin-top: 12px; }
+
+    /* ---------- bibtex ---------- */
+    pre.bib {
+      background: var(--bg-3);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin: 0;
+    }
+
+    /* ---------- lightbox ---------- */
+    .lb {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(14, 16, 22, .72);
+      backdrop-filter: blur(3px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .16s ease;
+    }
+    .lb.open { opacity: 1; pointer-events: auto; }
+
+    .lb-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 24px 60px rgba(10, 12, 20, .35);
+      max-width: min(1100px, 94vw);
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(.97);
+      transition: transform .16s ease;
+    }
+    .lb.open .lb-card { transform: scale(1); }
+
+    .lb-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 11px 12px 11px 18px;
+      border-bottom: 1px solid var(--line-2);
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .lb-close {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink-3);
+      border-radius: 8px;
+      width: 30px;
+      height: 30px;
+      font-size: 17px;
+      line-height: 1;
+      cursor: pointer;
+      font-family: inherit;
+      flex: 0 0 auto;
+    }
+    .lb-close:hover { color: var(--ink); border-color: var(--ink-3); }
+
+    .lb-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: hidden;
+      background: var(--bg-2);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb-body img {
+      display: block;
+      max-width: 100%;
+      max-height: calc(92vh - 104px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .lb-hint { font-size: 12.5px; font-weight: 400; color: var(--ink-3); }
+
+    footer {
+      padding: 34px 0 46px;
+      border-top: 1px solid var(--line-2);
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink-3);
+    }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+
+    @media (max-width: 900px) {
+      .cards, .hl, .two-col { grid-template-columns: 1fr; }
+      .panes { grid-template-columns: 1fr 1fr; }
+      .panes .pane.target { grid-row: auto; grid-column: span 2; align-self: stretch; }
+      .panes.no-prev .pane.target { grid-column: span 2; }
+      .panes .pane.target .imgbox { max-width: 100%; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .teaser-grid { grid-template-columns: repeat(2, 1fr); }
+      body { font-size: 16px; }
+      section { padding: 44px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================= HERO ============================= -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="badge">Preprint &middot; 2026</div>
+
+      <h1>Rubrics as Visual-Repair Context for<br>Self-Evolving UI-to-Code Generation</h1>
+
+      <p class="subtitle">
+        <b>RubSE</b> represents visual feedback as typed, single-target rubrics, turning unconstrained
+        self-critique into a structured visual-repair context for stable test-time refinement.
+      </p>
+
+      <div class="authors">
+        <a href="https://tyxiong23.github.io/">Tianyi Xiong</a><sup>1*</sup>,
+        <a href="https://zyang-ur.github.io/">Zhengyuan Yang</a><sup>2</sup>,
+        <a href="https://www.microsoft.com/en-us/research/people/xiaofewa/">Xiaofei Wang</a><sup>2</sup>,
+        <a href="https://www.microsoft.com/en-us/research/people/chunglin/">Chung-Ching Lin</a><sup>2</sup>,
+        <a href="https://rui-chun.github.io/">Ruichun Ma</a><sup>2</sup>,
+        <a href="https://sites.google.com/site/kevinlin311tw/me">Kevin Lin</a><sup>2</sup>,
+        <a href="https://zhendong-wang.github.io/">Zhendong Wang</a><sup>2</sup>,
+        <a href="https://www.microsoft.com/en-us/research/people/linjli/">Linjie Li</a><sup>2</sup>,
+        <a href="https://dawnliu35.github.io/">Chenxi Liu</a><sup>1</sup>,
+        <a href="https://rayruibochen.github.io/">Ruibo Chen</a><sup>1</sup>,
+        <a href="https://scholar.google.com/citations?user=GNEcpkAAAAAJ">Ramani Duraiswami</a><sup>1</sup>,
+        <a href="https://www.cs.umd.edu/~heng/">Heng Huang</a><sup>1</sup>,
+        <a href="https://www.microsoft.com/en-us/research/people/lijuanw/">Lijuan Wang</a><sup>2</sup>
+      </div>
+
+      <p class="affil"><sup>1</sup>University of Maryland, College Park &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+        <sup>2</sup>Microsoft
+      </p>
+      <p class="note">*Work done during an internship at Microsoft.</p>
+
+      <div class="links">
+        <!-- TODO: paste the arXiv (or paper) URL inside href="" below; rename the label to "arXiv" if preferred -->
+        <a class="btn" href="">
+          <svg viewBox="0 0 384 512">
+            <path
+              d="M320 464c8.8 0 16-7.2 16-16V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320zM0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64z" />
+          </svg>
+          <span>Paper</span>
+        </a>
+        <span class="btn muted">
+          <svg viewBox="0 0 496 512">
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z" />
+          </svg>
+          <span>Code &middot; Coming Soon</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================= TEASER ============================= -->
+  <section style="border-top:0; padding-top:30px;">
+    <div class="wrap">
+      <div class="teaser-panel">
+      <div class="teaser-grid">
+        <div class="shot gt">
+          <a href="../images/projects/2026-rubse/teaser/01_gt.png" data-lb="Ground Truth">
+            <div class="box"><img src="../images/projects/2026-rubse/teaser/01_gt.png" alt="Ground-truth webpage screenshot"></div>
+          </a>
+          <div class="lbl">Ground Truth</div>
+        </div>
+        <div class="shot">
+          <a href="../images/projects/2026-rubse/teaser/02_direct_inference.png" data-lb="Initial Generation">
+            <div class="box"><img src="../images/projects/2026-rubse/teaser/02_direct_inference.png" alt="Initial generation"></div>
+          </a>
+          <div class="lbl">Initial Generation</div>
+        </div>
+        <div class="shot bad">
+          <a href="../images/projects/2026-rubse/teaser/03_round2_self_evolve.png" data-lb="Na&iuml;ve Self-Evolution">
+            <div class="box"><img src="../images/projects/2026-rubse/teaser/03_round2_self_evolve.png" alt="Naive self-evolution result"></div>
+          </a>
+          <div class="lbl">Na&iuml;ve Self-Evolution</div>
+        </div>
+        <div class="shot win">
+          <a href="../images/projects/2026-rubse/teaser/04_round2_rubse.png" data-lb="RubSE (ours)">
+            <div class="box"><img src="../images/projects/2026-rubse/teaser/04_round2_rubse.png" alt="RubSE result"></div>
+          </a>
+          <div class="lbl">RubSE (ours)</div>
+        </div>
+      </div>
+
+      <div class="narrow" style="margin-top:20px;">
+        <div class="rubric">
+          <p class="rt">Left-align header branding <span class="chip t-layout">layout_geometry</span></p>
+          <p class="rd">Remove those left margins and align the brand block to the left; adjust <code>.head</code> grid
+            and <code>.brand</code> padding so the logo sits near the left like the reference.</p>
+        </div>
+        <p class="cap" style="text-align:center;"><b>One edit, two outcomes.</b> Na&iuml;ve self-evolution fixes the
+          gray bar but breaks page scale and bar length; guided by the rubric above, RubSE applies the same repair
+          while leaving the rest of the layout intact.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= ABSTRACT ============================= -->
+  <section class="alt">
+    <div class="wrap">
+      <p class="sec-kicker">At a glance</p>
+      <h2 class="sec" style="margin-bottom:34px;">What breaks test-time self-evolution for UI-to-code,<br>and what
+        fixes it</h2>
+
+      <div class="hl">
+        <div class="card">
+          <h4>A new failure mode</h4>
+          <p>Rendering is a <i>non-local</i> map: editing one line of CSS cascades through layout, flex/grid sizing,
+            font metrics, and asset placement. We name this <b>visual repair coupling</b> and show it makes na&iuml;ve
+            refinement trajectories drift below the initial draft.</p>
+        </div>
+        <div class="card">
+          <h4>Rubrics as visual-repair context</h4>
+          <p>Each round, RubSE emits typed candidate rubrics, commits to <b>exactly one</b> prioritized repair target,
+            and carries selected rubrics forward as history &mdash; separating error discovery, prioritization, and
+            memory instead of conflating them in one free-form critique.</p>
+        </div>
+        <div class="card">
+          <h4>Stable, higher ceiling</h4>
+          <p>Across 6 VLMs &times; 3 benchmarks, RubSE beats na&iuml;ve self-evolution in <b>15/18</b> final-round and
+            <b>14/18</b> best-round settings, reduces trajectory collapse for frontier models, and recovers from
+            regressions in fewer rounds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= HIGHLIGHTS ============================= -->
+  <section>
+    <div class="wrap narrow">
+      <h2 class="sec">Abstract</h2>
+      <p style="margin-top:22px;">
+        Large vision-language models have shown strong progress in UI-to-code generation, yet their test-time
+        self-evolution remains unstable. We first identify a fundamental obstacle, termed <i>visual repair
+          coupling</i>: a local code edit may propagate through layout, style, and component dependencies, correcting
+        one visual mismatch while degrading regions that were previously faithful. To address this issue, we present
+        <b>RubSE</b>, a <b>Rub</b>ric-guided <b>S</b>elf-<b>E</b>volution framework that uses rubrics to represent
+        visual feedback as a structured visual-repair context. At each refinement round, RubSE generates typed
+        candidate rubrics, selects one prioritized repair target, and stores previously selected rubrics as history,
+        thereby steering each revision toward a well-scoped visual repair while discouraging repeated or over-broad
+        changes.
+      </p>
+      <p>
+        Evaluations across six VLMs and three UI-to-code benchmarks demonstrate that RubSE substantially outperforms
+        na&iuml;ve self-evolution in final-round and best-round settings, achieving more stable refinement
+        trajectories and a higher trajectory-level performance ceiling. Further analysis shows that RubSE mitigates
+        trajectory collapse by improving recovery from severe visual regressions, and that stronger rubric generators
+        can transfer effective visual-repair guidance to weaker code improvers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================= MOTIVATION ============================= -->
+  <section class="alt">
+    <div class="wrap">
+      <p class="sec-kicker">Motivation</p>
+      <h2 class="sec">Na&iuml;ve self-evolution does not monotonically improve</h2>
+      <div class="sec-lead">UI-to-code offers a natural test-time signal &mdash; render the draft and compare it with
+        the target. Yet simply looping <i>critique &rarr; revise</i> degrades visual fidelity.</div>
+
+      <div class="two-col">
+        <div>
+          <div class="fig-frame">
+            <img src="../images/projects/2026-rubse/motivation.png"
+              alt="Score delta relative to the initial generation over 15 rounds of naive self-refinement">
+          </div>
+          <p class="cap"><b>Score delta relative to the initial generation</b> under na&iuml;ve self-refinement
+            (15 rounds). Both models show diminishing gains and later degradation; on Design2Code, refinement falls
+            below the initial generation.</p>
+        </div>
+        <div>
+          <h3 class="sub" style="margin-top:0;">Gains are small, transient, or negative</h3>
+          <p>On <b>UI2Code-Real</b>, GPT-5.2 reaches a modest peak of <b>+0.94</b> judge points and finishes at
+            <b>+0.34</b>; GPT-5.4 peaks higher at <b>+2.15</b> by round 2, then declines to <b>&minus;0.20</b>, below
+            its own initial draft.</p>
+          <p>The failure mode is stronger on <b>Design2Code</b>: <b>all 15/15</b> GPT-5.2 refined rounds land below
+            round 0, ending at <b>&minus;2.73</b>, while GPT-5.4 shows only a short-lived <b>+0.76</b> gain in the
+            first round before declining to <b>&minus;1.82</b>.</p>
+          <p style="margin-bottom:0;">The cause is not that the critic cannot see errors. It is that a free-form
+            critique tells the model <i>what is wrong</i> without constraining <i>what must stay untouched</i> &mdash;
+            so an attempted repair rewrites broadly and damages already-faithful regions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= METHOD ============================= -->
+  <section>
+    <div class="wrap">
+      <p class="sec-kicker">Method</p>
+      <h2 class="sec">RubSE: Evolve &rarr; Select &rarr; History</h2>
+      <div class="sec-lead">Self-evolution as sequential repair. Given the target screenshot <i>x</i>, the previous
+        code and rendering, and the accumulated rubric history, RubSE builds the repair context for the next edit.</div>
+
+      <div class="fig fig-frame">
+        <img src="../images/projects/2026-rubse/method.png"
+          alt="RubSE self-evolution pipeline: EVOLVE generates candidate rubrics, SELECT picks one, IMPROVE revises the code, and the rubric is appended to history">
+      </div>
+      <p class="cap"><b>The RubSE loop.</b> RubSE first generates a set of typed candidate rubrics for remaining visual
+        mismatches, then selects the most crucial one &mdash; the position and scale of the cookie modal in this
+        example &mdash; as a localized repair target, and uses it as context for code revision. After each round the
+        selected rubric is appended to the history and reused in subsequent rounds.</p>
+
+      <div class="narrow">
+        <h3 class="sub">A rubric is a structured repair target</h3>
+        <p>Instead of a paragraph of critique, each unit of feedback is an object
+          <code style="font-family:'JetBrains Mono',monospace;font-size:14px;background:var(--bg-3);padding:2px 7px;border-radius:5px;">&lambda;
+            = &lang;title, type, description&rang;</code>, where the description states what is currently mismatched
+          <i>and</i> how it should be corrected, and the type is drawn from a fixed five-aspect taxonomy enforced at
+          generation time so candidates span visually distinct dimensions rather than collapsing onto the most salient
+          defect:
+        </p>
+        <p style="display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;">
+          <span class="chip t-layout">layout_geometry</span>
+          <span class="chip t-spacing">spacing_density</span>
+          <span class="chip t-typo">typography_text</span>
+          <span class="chip t-style">styling_visual</span>
+          <span class="chip t-complete">completeness</span>
+        </p>
+        <p>Rubrics act as <i>soft</i> control: they make the repair objective explicit while leaving the code
+          generator free to decide how to implement the edit. The generator then emits the next HTML/CSS as
+          <span style="white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:14px;">c<sub>t</sub> =
+            G<sub>&theta;</sub>(x, c<sub>t&minus;1</sub>, r<sub>t&minus;1</sub>, &phi;<sub>t</sub>)</span>, with the
+          repair context <span
+            style="white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:14px;">&phi;<sub>t</sub> =
+            &lambda;<sup>*</sup><sub>t</sub></span> being a single selected rubric.
+        </p>
+      </div>
+
+      <div class="cards" style="margin-top:30px;">
+        <div class="card">
+          <h4><span class="step">1</span> Evolve</h4>
+          <p>Produce a typed candidate set of <code>K</code> rubrics for the current rendering. When the history is
+            non-empty it is passed as an explicit <b>avoid list</b>, so candidates only cover issues not already
+            addressed.</p>
+        </div>
+        <div class="card">
+          <h4><span class="step">2</span> Select</h4>
+          <p>Choose a <b>single</b> rubric &mdash; the one expected to maximize visual improvement under a targeted
+            edit. Keeping selection separate from generation prevents prioritization from being entangled with
+            candidate discovery.</p>
+        </div>
+        <div class="card">
+          <h4><span class="step">3</span> History</h4>
+          <p>Append the selected rubric to a per-instance, append-only history consumed by the next round's Evolve
+            step, discouraging repeated local repairs and encouraging exploration across visual dimensions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= QUALITATIVE ============================= -->
+  <section class="alt">
+    <div class="wrap wide">
+      <p class="sec-kicker">Qualitative results</p>
+      <h2 class="sec">One trajectory, round by round</h2>
+      <div class="sec-lead">Same target, same backbone (GPT-5.2), same budget. Step through the rounds to compare an
+        unconstrained refinement trajectory against a rubric-guided one.</div>
+
+      <div class="viewer">
+        <div class="rounds" id="rounds"></div>
+
+        <div class="panes" id="panes">
+          <div class="pane target">
+            <div class="head"><span>Target Screenshot</span><span class="tag">reference</span></div>
+            <div class="imgbox"><a href="../images/projects/2026-rubse/qual/se_gt.png" data-lb="Target Screenshot"><img
+                  src="../images/projects/2026-rubse/qual/se_gt.png" alt="Target screenshot"></a></div>
+          </div>
+
+          <div class="pane prev">
+            <div class="head"><span>Na&iuml;ve Self-Evolution</span><span class="tag" id="tag-se-prev">previous &middot;
+                round 0</span></div>
+            <div class="imgbox"><a id="lnk-se-prev" href="../images/projects/2026-rubse/qual/se_r0.png"
+                data-lb="Na&iuml;ve Self-Evolution"><img id="img-se-prev"
+                  src="../images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution, previous round"></a>
+            </div>
+          </div>
+          <div class="pane cur">
+            <div class="head"><span>Na&iuml;ve Self-Evolution</span><span class="tag" id="tag-se">round 1</span></div>
+            <div class="imgbox"><a id="lnk-se" href="../images/projects/2026-rubse/qual/se_r0.png"
+                data-lb="Na&iuml;ve Self-Evolution &mdash; round 0"><img id="img-se"
+                  src="../images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution rendering"></a></div>
+          </div>
+
+          <div class="pane prev">
+            <div class="head"><span>RubSE (ours)</span><span class="tag" id="tag-rub-prev">previous &middot; round 0</span></div>
+            <div class="imgbox"><a id="lnk-rub-prev" href="../images/projects/2026-rubse/qual/rub_r0.png"
+                data-lb="RubSE (ours)"><img id="img-rub-prev" src="../images/projects/2026-rubse/qual/rub_r0.png"
+                  alt="RubSE, previous round"></a></div>
+          </div>
+          <div class="pane cur ours">
+            <div class="head"><span>RubSE (ours)</span><span class="tag" id="tag-rub">round 1</span></div>
+            <div class="imgbox"><a id="lnk-rub" href="../images/projects/2026-rubse/qual/rub_r0.png"
+                data-lb="RubSE &mdash; round 0"><img id="img-rub" src="../images/projects/2026-rubse/qual/rub_r0.png"
+                  alt="RubSE rendering"></a></div>
+          </div>
+        </div>
+
+        <div class="rubric" id="rubric-card">
+          <p class="rt" id="rubric-title"></p>
+          <p class="rd" id="rubric-desc"></p>
+        </div>
+
+        <p class="hint">Click a round above (or use &larr;/&rarr;) &middot; the dashed panel is the previous round the
+          repair was applied to &middot; click any panel to enlarge it.</p>
+      </div>
+
+      <p class="cap" style="max-width:none;">
+        <b>Reading the trajectory.</b> Na&iuml;ve self-evolution oscillates: in round 5 it fixes the toggle color and
+        top-bar length but distorts the cookie modal's scale, and that error is repeatedly modified in later rounds
+        without ever being resolved. RubSE instead follows a structured repair path &mdash; cookie modal, top bar,
+        line-chart scale, toggle color. It is not immune to coupling (the round-4 chart-scale adjustment temporarily
+        misplaces the cookie modal), but it corrects the issue in the very next round, producing controlled and
+        recoverable gains.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================= MAIN RESULTS ============================= -->
+  <section>
+    <div class="wrap">
+      <p class="sec-kicker">Main results</p>
+      <div class="sec-lead" style="margin-top:4px;">We evaluate on <b>UI2Code-Real</b>, <b>Design2Code</b> and <b>Design2Code-HARD</b>,
+        scoring each rendering against the target with a frontier VLM judge: an overall 0&ndash;100 score and the mean
+        of five 1&ndash;7 aspect ratings, each averaged over three judge runs.</div>
+
+      <div class="stats" style="margin-bottom:30px;">
+        <div class="stat">
+          <div class="n">15/18</div>
+          <div class="l">settings improved at round 10 over na&iuml;ve self-evolution</div>
+        </div>
+        <div class="stat">
+          <div class="n">+1.20</div>
+          <div class="l">average overall-score gain at the final round</div>
+        </div>
+        <div class="stat">
+          <div class="n">+1.13</div>
+          <div class="l">average overall-score gain at the best round</div>
+        </div>
+        <div class="stat">
+          <div class="n">1.60&times;</div>
+          <div class="l">API cost vs. na&iuml;ve self-evolution (GPT-5.4)</div>
+        </div>
+      </div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2" class="lft">Model</th>
+              <th rowspan="2" class="lft">Method</th>
+              <th colspan="2" class="sep-l">UI2Code-Real</th>
+              <th colspan="2" class="sep-l">Design2Code</th>
+              <th colspan="2" class="sep-l">Design2Code-HARD</th>
+            </tr>
+            <tr>
+              <th class="sep-l">Overall &uarr;</th>
+              <th>Aspect &uarr;</th>
+              <th class="sep-l">Overall &uarr;</th>
+              <th>Aspect &uarr;</th>
+              <th class="sep-l">Overall &uarr;</th>
+              <th>Aspect &uarr;</th>
+            </tr>
+          </thead>
+          <tbody>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">GPT-5.4</th>
+        <td>Direct</td>
+        <td>85.4</td>
+        <td class="aspect">5.32</td>
+        <td>86.9</td>
+        <td class="aspect">5.63</td>
+        <td>79.8</td>
+        <td class="aspect">4.72</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td>85.6</td>
+        <td class="aspect">5.43</td>
+        <td>85.8</td>
+        <td class="aspect">5.50</td>
+        <td>78.0</td>
+        <td class="aspect">4.61</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td>87.6<span class="rnd">r2</span></td>
+        <td class="aspect">5.61</td>
+        <td>87.7<span class="rnd">r1</span></td>
+        <td class="aspect">5.68</td>
+        <td>80.0<span class="rnd">r1</span></td>
+        <td class="second aspect">4.77</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td class="second">87.9</td>
+        <td class="best aspect">5.66</td>
+        <td class="second">87.8</td>
+        <td class="second aspect">5.76</td>
+        <td class="second">80.3</td>
+        <td class="aspect">4.74</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td class="best">88.1<span class="rnd">r8</span></td>
+        <td class="second aspect">5.63</td>
+        <td class="best">88.2<span class="rnd">r3</span></td>
+        <td class="best aspect">5.79</td>
+        <td class="best">80.8<span class="rnd">r4</span></td>
+        <td class="best aspect">4.79</td>
+      </tr>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">GPT-5.2</th>
+        <td>Direct</td>
+        <td>81.6</td>
+        <td class="aspect">5.03</td>
+        <td>86.4</td>
+        <td class="second aspect">5.59</td>
+        <td>82.7</td>
+        <td class="aspect">5.03</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td>82.5</td>
+        <td class="aspect">5.06</td>
+        <td>83.9</td>
+        <td class="aspect">5.12</td>
+        <td>82.3</td>
+        <td class="aspect">4.92</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td>82.6<span class="rnd">r6</span></td>
+        <td class="aspect">5.06</td>
+        <td>84.6<span class="rnd">r1</span></td>
+        <td class="aspect">5.20</td>
+        <td>82.8<span class="rnd">r2</span></td>
+        <td class="aspect">4.97</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td class="second">85.0</td>
+        <td class="second aspect">5.29</td>
+        <td class="second">87.2</td>
+        <td class="aspect">5.43</td>
+        <td class="second">84.4</td>
+        <td class="second aspect">5.13</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td class="best">85.1<span class="rnd">r7</span></td>
+        <td class="best aspect">5.35</td>
+        <td class="best">88.1<span class="rnd">r2</span></td>
+        <td class="best aspect">5.71</td>
+        <td class="best">84.8<span class="rnd">r7</span></td>
+        <td class="best aspect">5.15</td>
+      </tr>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">Claude-Sonnet-4.5</th>
+        <td>Direct</td>
+        <td>73.3</td>
+        <td class="aspect">4.45</td>
+        <td>83.0</td>
+        <td class="aspect">4.98</td>
+        <td>79.8</td>
+        <td class="aspect">4.80</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td>75.5</td>
+        <td class="aspect">4.70</td>
+        <td>83.3</td>
+        <td class="aspect">5.04</td>
+        <td>80.1</td>
+        <td class="best aspect">4.87</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td>75.8<span class="rnd">r3</span></td>
+        <td class="aspect">4.69</td>
+        <td class="best">83.5<span class="rnd">r3</span></td>
+        <td class="aspect">5.04</td>
+        <td class="best">81.2<span class="rnd">r8</span></td>
+        <td class="second aspect">4.84</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td class="second">77.6</td>
+        <td class="best aspect">4.78</td>
+        <td class="best">83.5</td>
+        <td class="best aspect">5.05</td>
+        <td>80.4</td>
+        <td class="second aspect">4.84</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td class="best">79.1<span class="rnd">r7</span></td>
+        <td class="second aspect">4.74</td>
+        <td class="best">83.5<span class="rnd">r10</span></td>
+        <td class="best aspect">5.05</td>
+        <td class="best">81.2<span class="rnd">r3</span></td>
+        <td class="aspect">4.82</td>
+      </tr>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">Qwen3-VL-32B</th>
+        <td>Direct</td>
+        <td>66.2</td>
+        <td class="aspect">4.10</td>
+        <td>79.6</td>
+        <td class="aspect">4.84</td>
+        <td>78.0</td>
+        <td class="aspect">4.74</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td class="best">68.6</td>
+        <td class="best aspect">4.23</td>
+        <td>81.3</td>
+        <td class="aspect">4.95</td>
+        <td class="best">84.4</td>
+        <td class="second aspect">4.99</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td class="best">68.6<span class="rnd">r10</span></td>
+        <td class="best aspect">4.23</td>
+        <td class="second">81.4<span class="rnd">r7</span></td>
+        <td class="aspect">4.94</td>
+        <td class="best">84.4<span class="rnd">r10</span></td>
+        <td class="second aspect">4.99</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td>68.3</td>
+        <td class="aspect">4.18</td>
+        <td class="second">81.4</td>
+        <td class="second aspect">4.96</td>
+        <td>82.0</td>
+        <td class="best aspect">5.04</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td>68.5<span class="rnd">r5</span></td>
+        <td class="aspect">4.19</td>
+        <td class="best">82.0<span class="rnd">r5</span></td>
+        <td class="best aspect">4.97</td>
+        <td>82.8<span class="rnd">r1</span></td>
+        <td class="second aspect">4.99</td>
+      </tr>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">Qwen3.5-9B</th>
+        <td>Direct</td>
+        <td>67.9</td>
+        <td class="aspect">4.18</td>
+        <td>70.3</td>
+        <td class="aspect">4.27</td>
+        <td>72.0</td>
+        <td class="aspect">4.36</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td>69.8</td>
+        <td class="aspect">4.28</td>
+        <td>73.6</td>
+        <td class="aspect">4.47</td>
+        <td>76.0</td>
+        <td class="aspect">4.53</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td>69.8<span class="rnd">r10</span></td>
+        <td class="aspect">4.28</td>
+        <td>74.3<span class="rnd">r7</span></td>
+        <td class="aspect">4.47</td>
+        <td>76.0<span class="rnd">r10</span></td>
+        <td class="aspect">4.53</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td class="second">70.5</td>
+        <td class="second aspect">4.34</td>
+        <td class="second">75.0</td>
+        <td class="best aspect">4.56</td>
+        <td class="best">77.6</td>
+        <td class="best aspect">4.64</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td class="best">70.9<span class="rnd">r9</span></td>
+        <td class="best aspect">4.35</td>
+        <td class="best">75.6<span class="rnd">r7</span></td>
+        <td class="second aspect">4.55</td>
+        <td class="best">77.6<span class="rnd">r10</span></td>
+        <td class="best aspect">4.64</td>
+      </tr>
+      <tr class="grp-start">
+        <th scope="rowgroup" rowspan="5" class="model">Qwen3.6-35B-A3B</th>
+        <td>Direct</td>
+        <td>73.3</td>
+        <td class="aspect">4.52</td>
+        <td>80.6</td>
+        <td class="aspect">4.95</td>
+        <td>81.3</td>
+        <td class="aspect">4.93</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (<i>r</i>=10)</td>
+        <td>75.1</td>
+        <td class="aspect">4.61</td>
+        <td>81.6</td>
+        <td class="aspect">5.04</td>
+        <td>82.5</td>
+        <td class="aspect">5.01</td>
+      </tr>
+      <tr>
+        <td>+ Self-Evolve (best)</td>
+        <td>75.5<span class="rnd">r9</span></td>
+        <td class="aspect">4.58</td>
+        <td>81.8<span class="rnd">r8</span></td>
+        <td class="aspect">5.04</td>
+        <td>82.5<span class="rnd">r10</span></td>
+        <td class="aspect">5.01</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (<i>r</i>=10)</td>
+        <td class="best">77.0</td>
+        <td class="best aspect">4.80</td>
+        <td class="best">82.0</td>
+        <td class="best aspect">5.10</td>
+        <td class="second">83.6</td>
+        <td class="second aspect">5.05</td>
+      </tr>
+      <tr>
+        <td class="ours">+ <b>RubSE</b> (best)</td>
+        <td class="best">77.0<span class="rnd">r10</span></td>
+        <td class="best aspect">4.80</td>
+        <td class="best">82.0<span class="rnd">r10</span></td>
+        <td class="best aspect">5.10</td>
+        <td class="best">85.2<span class="rnd">r7</span></td>
+        <td class="best aspect">5.14</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="legend"><b>Bold</b> = best per column within each model block, <u>underline</u> = second best.
+        Subscripts mark the selected best round. &ldquo;Direct&rdquo; is the initial generation (round 0);
+        &ldquo;best&rdquo; is the oracle round selected by the overall score, with the aspect score taken from that
+        same round.</p>
+
+      <div class="cards" style="margin-top:34px;">
+        <div class="card">
+          <h4 style="text-transform:none;letter-spacing:0;font-size:16.5px;color:var(--ink);">Stability first</h4>
+          <p>At round 10, RubSE improves over na&iuml;ve self-evolution by <b>+1.20</b> overall and <b>+0.11</b>
+            aspect on average. The effect is clearest on frontier executors (<b>+1.90</b> / <b>+0.16</b>), where
+            unconstrained revision tends to lose its early gains.</p>
+        </div>
+        <div class="card">
+          <h4 style="text-transform:none;letter-spacing:0;font-size:16.5px;color:var(--ink);">Long-tail refinement</h4>
+          <p>On frontier VLMs, RubSE reaches its best checkpoint much later (<b>r=5.7</b> vs. <b>r=3.0</b>) while
+            gaining more over direct generation (<b>+2.22</b> vs. <b>+0.77</b>) &mdash; it keeps finding localized
+            fixes after free-form refinement has plateaued or drifted.</p>
+        </div>
+        <div class="card">
+          <h4 style="text-transform:none;letter-spacing:0;font-size:16.5px;color:var(--ink);">Open-source headroom
+          </h4>
+          <p>RubSE improves over direct generation in <b>all 9</b> Qwen settings, with an average best-round gain of
+            <b>+3.60</b> vs. <b>+2.79</b> for na&iuml;ve self-evolution &mdash; though the dynamics are more
+            model-dependent.</p>
+        </div>
+      </div>
+
+      <p class="cap narrow" style="margin-top:24px;text-align:center;">A pairwise human study on 60 UI2Code-Real
+        samples confirms the gains are perceptible: round-10 RubSE outputs are preferred over na&iuml;ve
+        self-evolution for both GPT-5.2 and GPT-5.4 (<i>p</i> &lt; 0.01).</p>
+    </div>
+  </section>
+
+  <!-- ============================= ANALYSIS ============================= -->
+  <section class="alt">
+    <div class="wrap">
+      <p class="sec-kicker">Analysis</p>
+      <h3 class="sub-lg" style="margin-top:6px;">Ablation studies</h3>
+      <div class="sec-lead">Which part of the rubric loop actually does the work?</div>
+
+      <div class="two-col">
+        <div>
+          <div class="fig-frame">
+            <img src="../images/projects/2026-rubse/ablation.png"
+              alt="Ablation study on UI2Code-Real with GPT-5.2 backbone">
+          </div>
+          <p class="cap"><b>Ablation on UI2Code-Real</b> (GPT-5.2 backbone). Using <i>all</i> generated rubrics or a
+            <i>random</i> one yields modest early gains that become unstable; removing <i>history</i> gives consistent
+            but smaller improvements. Only the full method improves steadily on both metrics.</p>
+        </div>
+        <div>
+          <h3 class="sub" style="margin-top:0;">Selection controls the edit scope</h3>
+          <p>Feeding the whole candidate set back to the generator re-creates the original problem &mdash; a broad,
+            entangled edit. Selecting one rubric at random loses the prioritization signal. Both variants drift in
+            later iterations, confirming that <b>SELECT</b> is what keeps each round scoped to the most crucial yet
+            localized visual issue.</p>
+          <h3 class="sub">History prevents repeated repairs</h3>
+          <p>Without the append-only history, gains are consistent but smaller: past rubrics are what stop the model
+            from re-litigating the same region and push it to explore across visual dimensions.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-lg">Fewer collapses, faster recovery</h3>
+      <p class="narrow" style="text-align:center;color:var(--ink-2);">We call a consecutive-round regression a
+        <b>visual-repair collapse</b> when the overall score drops by &ge;&nbsp;8 points and the aspect mean by
+        &ge;&nbsp;0.35; a <b>recovery</b> returns within 2 overall points and 0.10 aspect of the pre-collapse state.
+      </p>
+
+      <div class="two-col" style="margin-top:22px;">
+        <div>
+          <div class="tbl-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2" class="lft">Model</th>
+                  <th colspan="2" class="sep-l">Self-Evolve</th>
+                  <th colspan="2" class="sep-l">RubSE (ours)</th>
+                </tr>
+                <tr>
+                  <th class="sep-l">Collapse &darr;</th>
+                  <th>Recover &uarr;</th>
+                  <th class="sep-l">Collapse &darr;</th>
+                  <th>Recover &uarr;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grp-start">
+                  <td class="lft">GPT-5.2</td>
+                  <td>20.8%</td><td>26.2%</td><td class="best">13.5%</td><td>24.2%</td>
+                </tr>
+                <tr>
+                  <td class="lft">GPT-5.4</td>
+                  <td>17.9%</td><td>18.5%</td><td class="best">11.2%</td><td class="best">50.0%</td>
+                </tr>
+                <tr>
+                  <td class="lft">Claude-4.5</td>
+                  <td>18.0%</td><td>17.3%</td><td class="best">13.8%</td><td class="best">24.1%</td>
+                </tr>
+                <tr class="grp-start">
+                  <td class="lft">Qwen3-VL</td>
+                  <td class="best">11.5%</td><td class="best">23.1%</td><td>15.3%</td><td>22.6%</td>
+                </tr>
+                <tr>
+                  <td class="lft">Qwen3.5</td>
+                  <td class="best">17.9%</td><td>21.2%</td><td>19.4%</td><td class="best">23.5%</td>
+                </tr>
+                <tr>
+                  <td class="lft">Qwen3.6</td>
+                  <td class="best">14.9%</td><td>26.2%</td><td>19.6%</td><td class="best">44.4%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="cap"><b>Trajectory collapse and recovery rates</b>, aggregated over all three benchmarks
+            (<b>bold</b> = better of the two methods). For
+            frontier VLMs, RubSE reduces collapse for all three models (18.9% &rarr; 12.8% on average). Recovery
+            improves broadly (frontier 20.7% &rarr; 32.8%; Qwen 23.5% &rarr; 30.2%).</p>
+        </div>
+        <div>
+          <div class="fig-frame">
+            <img src="../images/projects/2026-rubse/recovery.png"
+              alt="Density of the number of rounds needed to recover from a collapse">
+          </div>
+          <p class="cap"><b>Rounds needed to recover.</b> For both open-source and frontier VLMs, RubSE concentrates
+            in earlier rounds, requiring fewer rounds on average to return to the pre-collapse state (dotted lines
+            mark per-method averages).</p>
+        </div>
+      </div>
+
+      <h3 class="sub-lg">Stronger rubrics transfer to weaker code improvers</h3>
+      <p class="narrow" style="text-align:center;color:var(--ink-2);">Keeping each Qwen model as the code improver but
+        replacing its self-generated rubrics with rubrics generated and selected by GPT-5.4 improves self-evolution
+        across all three models &mdash; rubrics behave as model-agnostic visual-repair context.</p>
+
+      <div class="fig fig-frame">
+        <img src="../images/projects/2026-rubse/transfer.png"
+          alt="Applying GPT-generated rubrics to open-source VLM self-evolution">
+      </div>
+      <p class="cap"><b>GPT-generated rubrics vs. self-generated rubrics</b> on UI2Code-Real. Across all three Qwen
+        models, externally generated rubrics lead to stronger and more consistent gains, particularly in early
+        refinement rounds.</p>
+
+      <div class="narrow" style="margin-top:26px;">
+        <p style="margin-bottom:0;">A content analysis explains why. Self-generated Qwen rubrics are low-level and
+          narrowly scoped &mdash; they name CSS properties, pixel values, and individual widgets (numeric or color
+          constants in <b>35&ndash;46%</b> of rubrics vs. <b>7%</b> for GPT). GPT-generated rubrics instead describe
+          perceptual relations such as layout, scale, and hierarchy (<b>89&ndash;91%</b> global-structure cues vs.
+          <b>68&ndash;71%</b>) and use far more action-oriented revision language (<b>77&ndash;82%</b> vs.
+          <b>50&ndash;65%</b>), steering weaker improvers out of local CSS-level repair loops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= BIBTEX ============================= -->
+  <section>
+    <div class="wrap narrow">
+      <h2 class="sec">BibTeX</h2>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:-11px;position:relative;z-index:1;">
+        <button id="copy-bib" class="rbtn" type="button" style="font-size:13px;padding:5px 13px;">Copy</button>
+      </div>
+      <!-- TODO: fill in the arXiv id / eprint number below once available -->
+      <pre class="bib">@article{xiong2026rubse,
+  title   = {Rubrics as Visual-Repair Context for Self-Evolving UI-to-Code Generation},
+  author  = {Xiong, Tianyi and Yang, Zhengyuan and Wang, Xiaofei and Lin, Chung-Ching and
+             Ma, Ruichun and Lin, Kevin and Wang, Zhendong and Li, Linjie and Liu, Chenxi and
+             Chen, Ruibo and Duraiswami, Ramani and Huang, Heng and Wang, Lijuan},
+  journal = {arXiv preprint arXiv:},
+  year    = {2026}
+}</pre>
+    </div>
+  </section>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lb-card">
+      <div class="lb-bar">
+        <span id="lb-title"></span>
+        <span class="lb-hint">click outside or press Esc to close</span>
+        <button class="lb-close" id="lb-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="lb-body"><img id="lb-img" src="" alt=""></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p style="margin:0;">&copy; 2026 The Authors. Page maintained by
+        <a href="https://tyxiong23.github.io/">Tianyi Xiong</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var ROUNDS = [
+        {
+          r: 1, type: 'layout_geometry', title: 'Cookie modal size and placement',
+          desc: 'The reference cookie dialog is larger and anchored lower/right, covering a big portion of the sidebar and chart area; the current modal is smaller and placed too high (top:260px) and not as far right. Increase modal width/height and reposition it to bottom-right (e.g., position:fixed; right:70px; bottom:40px) to match the overlay behavior and coverage seen in the target.'
+        },
+        {
+          r: 2, type: 'layout_geometry', title: 'Top navigation horizontal alignment',
+          desc: 'In the reference, the main nav (HOME, CHARTS, NEWS, #1 AWARD, INFO) sits right-of-center near the top, while the LOG-IN + search are at the far top-right; in the current render, the nav is centered and the right controls are pushed down the line. Adjust the topbar layout, e.g., three-column grid with fixed left brand, flexible middle nav aligned right, and right controls pinned to the edge, so the nav is not centered and matches the reference positioning.'
+        },
+        {
+          r: 3, type: 'completeness', title: 'Album cover artwork: use an image instead of gradient placeholder',
+          desc: 'The reference shows the actual “Paint It, Black” cover image with detailed artwork. The current render uses a green striped placeholder; replace the cover background with an image or a background-image and size it to match the square cover presentation.'
+        },
+        {
+          r: 4, type: 'layout_geometry', title: 'Page width and left content scaling',
+          desc: 'The reference has a wider overall canvas with more whitespace and a slightly more left-shifted main content block; the current layout feels more compressed due to a fixed 1200px wrap and heavy inner padding. Increase the max width or switch to a larger responsive max-width and adjust left/right padding so the main column proportions match the reference.'
+        },
+        {
+          r: 5, type: 'layout_geometry', title: 'Right sidebar card widths and stacking',
+          desc: 'In the reference, the black countdown card, red FACEBOOK bar, and red SPOTIFY bar are narrower and aligned as a single column with more whitespace to the right; in the current render they span the full 340px sidebar and look too wide. Reduce the sidebar column width and/or set a fixed card width with left alignment so the cards match the narrower block seen in the target.'
+        },
+        {
+          r: 6, type: 'styling_visual', title: 'Cookie toggle controls should be radio/slider style with red accent on right',
+          desc: 'The reference shows compact toggle/radio-like controls with a red accent/knob on the right side of each control, while the current switches are gray with a white knob on the left and an ‘×’ overlay. Redesign the toggle to place the knob/indicator on the right and use the red accent to match the reference control styling.'
+        },
+        {
+          r: 7, type: 'typography_text', title: 'FACEBOOK bar text alignment',
+          desc: 'In the reference, the FACEBOOK label is left-aligned within the red bar with noticeable left padding; the current implementation centers the label. Change the FACEBOOK bar to left-align text and add left padding similar to the reference, roughly 18–24px.'
+        }
+      ];
+
+      var CHIP = {
+        layout_geometry: 't-layout',
+        spacing_density: 't-spacing',
+        typography_text: 't-typo',
+        styling_visual: 't-style',
+        completeness: 't-complete'
+      };
+
+      var base = '../images/projects/2026-rubse/qual/';
+      var bar = document.getElementById('rounds');
+      var imgSE = document.getElementById('img-se'), lnkSE = document.getElementById('lnk-se');
+      var imgRB = document.getElementById('img-rub'), lnkRB = document.getElementById('lnk-rub');
+      var tagSE = document.getElementById('tag-se'), tagRB = document.getElementById('tag-rub');
+      var panes = document.getElementById('panes');
+      var imgSEp = document.getElementById('img-se-prev'), lnkSEp = document.getElementById('lnk-se-prev');
+      var imgRBp = document.getElementById('img-rub-prev'), lnkRBp = document.getElementById('lnk-rub-prev');
+      var tagSEp = document.getElementById('tag-se-prev'), tagRBp = document.getElementById('tag-rub-prev');
+      var card = document.getElementById('rubric-card');
+      var rTitle = document.getElementById('rubric-title'), rDesc = document.getElementById('rubric-desc');
+      var cur = 0;
+
+      ROUNDS.forEach(function (d, i) {
+        var b = document.createElement('button');
+        b.className = 'rbtn';
+        b.type = 'button';
+        b.textContent = 'Round ' + d.r;
+        b.setAttribute('aria-pressed', 'false');
+        b.addEventListener('click', function () { show(i); });
+        bar.appendChild(b);
+      });
+
+      function show(i) {
+        cur = i;
+        var d = ROUNDS[i];
+        var se = base + 'se_r' + d.r + '.png', rb = base + 'rub_r' + d.r + '.png';
+        imgSE.src = se; lnkSE.href = se;
+        imgRB.src = rb; lnkRB.href = rb;
+        tagSE.textContent = 'round ' + d.r;
+        tagRB.textContent = 'round ' + d.r;
+        lnkSE.setAttribute('data-lb', 'Na\u00efve Self-Evolution \u2014 round ' + d.r);
+        lnkRB.setAttribute('data-lb', 'RubSE \u2014 round ' + d.r);
+
+        if (d.r === 0) {
+          panes.classList.add('no-prev');
+        } else {
+          panes.classList.remove('no-prev');
+          var p = d.r - 1;
+          var sep = base + 'se_r' + p + '.png', rbp = base + 'rub_r' + p + '.png';
+          imgSEp.src = sep; lnkSEp.href = sep;
+          imgRBp.src = rbp; lnkRBp.href = rbp;
+          tagSEp.textContent = 'previous \u00b7 round ' + p;
+          tagRBp.textContent = 'previous \u00b7 round ' + p;
+          lnkSEp.setAttribute('data-lb', 'Na\u00efve Self-Evolution \u2014 round ' + p);
+          lnkRBp.setAttribute('data-lb', 'RubSE \u2014 round ' + p);
+        }
+
+        if (d.title) {
+          card.classList.remove('empty');
+          rTitle.innerHTML = '<span>Selected rubric &lambda;<sup>*</sup><sub>' + d.r + '</sub>: ' +
+            escapeHtml(d.title) + '</span><span class="chip ' + CHIP[d.type] + '">' + d.type + '</span>';
+        } else {
+          card.classList.add('empty');
+          rTitle.innerHTML = '<span style="color:var(--ink-3);font-weight:600;">Initial generation &mdash; no rubric yet</span>';
+        }
+        rDesc.textContent = d.desc;
+
+        var btns = bar.querySelectorAll('.rbtn');
+        for (var k = 0; k < btns.length; k++) {
+          btns[k].setAttribute('aria-pressed', k === i ? 'true' : 'false');
+        }
+      }
+
+      function escapeHtml(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (document.getElementById('lb').classList.contains('open')) return;
+        if (e.key === 'ArrowRight' && cur < ROUNDS.length - 1) show(cur + 1);
+        if (e.key === 'ArrowLeft' && cur > 0) show(cur - 1);
+      });
+
+      // preload
+      ROUNDS.forEach(function (d) {
+        new Image().src = base + 'se_r' + d.r + '.png';
+        new Image().src = base + 'rub_r' + d.r + '.png';
+      });
+
+      show(0);
+
+      // ---------- lightbox ----------
+      var lb = document.getElementById('lb');
+      var lbImg = document.getElementById('lb-img');
+      var lbTitle = document.getElementById('lb-title');
+
+      function openLb(href, label) {
+        lbImg.src = href;
+        lbImg.alt = label || '';
+        lbTitle.innerHTML = label || '';
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLb() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[data-lb]') : null;
+        if (a) {
+          e.preventDefault();
+          openLb(a.getAttribute('href'), a.getAttribute('data-lb'));
+        }
+      });
+
+      lb.addEventListener('click', function (e) {
+        if (e.target === lb || e.target.id === 'lb-close') closeLb();
+      });
+      document.getElementById('lb-close').addEventListener('click', closeLb);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLb();
+      });
+
+      var cb = document.getElementById('copy-bib');
+      if (cb) {
+        cb.addEventListener('click', function () {
+          var txt = document.querySelector('pre.bib').innerText;
+          function done() { cb.textContent = 'Copied'; setTimeout(function () { cb.textContent = 'Copy'; }, 1600); }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(txt).then(done, function () { });
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = txt; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); done(); } catch (err) { }
+            document.body.removeChild(ta);
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
