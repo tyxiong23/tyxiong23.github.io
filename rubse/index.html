@@ -142,7 +142,7 @@
     .cap b { color: var(--ink-2); }
 
     /* ---------- hero ---------- */
-    header.hero { padding: 62px 0 12px; text-align: center; border: 0; }
+    header.hero { padding: 74px 0 12px; text-align: center; border: 0; }
 
     .badge {
       display: inline-block;
@@ -163,7 +163,7 @@
       line-height: 1.16;
       font-weight: 600;
       letter-spacing: -0.02em;
-      margin: 0 auto 8px;
+      margin: 0 auto 30px;
       max-width: 15.5em;
     }
 
@@ -174,6 +174,16 @@
       margin: 0 auto 26px;
     }
     .subtitle b { color: var(--accent); font-weight: 600; }
+
+    .closer {
+      text-align: center;
+      font-size: 18.5px;
+      line-height: 1.6;
+      color: var(--ink-2);
+      max-width: 760px;
+      margin: 34px auto 0;
+    }
+    .closer b { color: var(--accent); font-weight: 600; }
 
     .authors {
       font-size: 17px;
@@ -558,14 +568,7 @@
   <!-- ============================= HERO ============================= -->
   <header class="hero">
     <div class="wrap">
-      <div class="badge">Preprint &middot; 2026</div>
-
       <h1>Rubrics as Visual-Repair Context for<br>Self-Evolving UI-to-Code Generation</h1>
-
-      <p class="subtitle">
-        <b>RubSE</b> represents visual feedback as typed, single-target rubrics, turning unconstrained
-        self-critique into a structured visual-repair context for stable test-time refinement.
-      </p>
 
       <div class="authors">
         <a href="https://tyxiong23.github.io/">Tianyi Xiong</a><sup>1*</sup>,
@@ -653,7 +656,7 @@
     </div>
   </section>
 
-  <!-- ============================= ABSTRACT ============================= -->
+  <!-- ============================= AT A GLANCE ============================= -->
   <section class="alt">
     <div class="wrap">
       <p class="sec-kicker">At a glance</p>
@@ -680,10 +683,13 @@
             regressions in fewer rounds.</p>
         </div>
       </div>
+
+      <p class="closer"><b>RubSE</b> represents visual feedback as typed, single-target rubrics, turning
+        unconstrained self-critique into a structured visual-repair context for stable test-time refinement.</p>
     </div>
   </section>
 
-  <!-- ============================= HIGHLIGHTS ============================= -->
+  <!-- ============================= ABSTRACT ============================= -->
   <section>
     <div class="wrap narrow">
       <h2 class="sec">Abstract</h2>
