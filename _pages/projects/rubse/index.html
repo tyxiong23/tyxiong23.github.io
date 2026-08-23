@@ -1,3 +1,15 @@
+---
+layout: none
+title: "RubSE"
+permalink: /rubse
+author_profile: false
+# Keep this page out of sitemap.xml and /sitemap/ while the paper is unreleased.
+# Delete the next line (and the robots meta tags below) after the arXiv release.
+sitemap: false
+redirect_from:
+- /rubse/
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -617,26 +629,26 @@
       <div class="teaser-panel">
       <div class="teaser-grid">
         <div class="shot gt">
-          <a href="../images/projects/2026-rubse/teaser/01_gt.png" data-lb="Ground Truth">
-            <div class="box"><img src="../images/projects/2026-rubse/teaser/01_gt.png" alt="Ground-truth webpage screenshot"></div>
+          <a href="/images/projects/2026-rubse/teaser/01_gt.png" data-lb="Ground Truth">
+            <div class="box"><img src="/images/projects/2026-rubse/teaser/01_gt.png" alt="Ground-truth webpage screenshot"></div>
           </a>
           <div class="lbl">Ground Truth</div>
         </div>
         <div class="shot">
-          <a href="../images/projects/2026-rubse/teaser/02_direct_inference.png" data-lb="Initial Generation">
-            <div class="box"><img src="../images/projects/2026-rubse/teaser/02_direct_inference.png" alt="Initial generation"></div>
+          <a href="/images/projects/2026-rubse/teaser/02_direct_inference.png" data-lb="Initial Generation">
+            <div class="box"><img src="/images/projects/2026-rubse/teaser/02_direct_inference.png" alt="Initial generation"></div>
           </a>
           <div class="lbl">Initial Generation</div>
         </div>
         <div class="shot bad">
-          <a href="../images/projects/2026-rubse/teaser/03_round2_self_evolve.png" data-lb="Na&iuml;ve Self-Evolution">
-            <div class="box"><img src="../images/projects/2026-rubse/teaser/03_round2_self_evolve.png" alt="Naive self-evolution result"></div>
+          <a href="/images/projects/2026-rubse/teaser/03_round2_self_evolve.png" data-lb="Na&iuml;ve Self-Evolution">
+            <div class="box"><img src="/images/projects/2026-rubse/teaser/03_round2_self_evolve.png" alt="Naive self-evolution result"></div>
           </a>
           <div class="lbl">Na&iuml;ve Self-Evolution</div>
         </div>
         <div class="shot win">
-          <a href="../images/projects/2026-rubse/teaser/04_round2_rubse.png" data-lb="RubSE (ours)">
-            <div class="box"><img src="../images/projects/2026-rubse/teaser/04_round2_rubse.png" alt="RubSE result"></div>
+          <a href="/images/projects/2026-rubse/teaser/04_round2_rubse.png" data-lb="RubSE (ours)">
+            <div class="box"><img src="/images/projects/2026-rubse/teaser/04_round2_rubse.png" alt="RubSE result"></div>
           </a>
           <div class="lbl">RubSE (ours)</div>
         </div>
@@ -725,7 +737,7 @@
       <div class="two-col">
         <div>
           <div class="fig-frame">
-            <img src="../images/projects/2026-rubse/motivation.png"
+            <img src="/images/projects/2026-rubse/motivation.png"
               alt="Score delta relative to the initial generation over 15 rounds of naive self-refinement">
           </div>
           <p class="cap"><b>Score delta relative to the initial generation</b> under na&iuml;ve self-refinement
@@ -757,7 +769,7 @@
         code and rendering, and the accumulated rubric history, RubSE builds the repair context for the next edit.</div>
 
       <div class="fig fig-frame">
-        <img src="../images/projects/2026-rubse/method.png"
+        <img src="/images/projects/2026-rubse/method.png"
           alt="RubSE self-evolution pipeline: EVOLVE generates candidate rubrics, SELECT picks one, IMPROVE revises the code, and the rubric is appended to history">
       </div>
       <p class="cap"><b>The RubSE loop.</b> RubSE first generates a set of typed candidate rubrics for remaining visual
@@ -827,35 +839,35 @@
         <div class="panes" id="panes">
           <div class="pane target">
             <div class="head"><span>Target Screenshot</span><span class="tag">reference</span></div>
-            <div class="imgbox"><a href="../images/projects/2026-rubse/qual/se_gt.png" data-lb="Target Screenshot"><img
-                  src="../images/projects/2026-rubse/qual/se_gt.png" alt="Target screenshot"></a></div>
+            <div class="imgbox"><a href="/images/projects/2026-rubse/qual/se_gt.png" data-lb="Target Screenshot"><img
+                  src="/images/projects/2026-rubse/qual/se_gt.png" alt="Target screenshot"></a></div>
           </div>
 
           <div class="pane prev">
             <div class="head"><span>Na&iuml;ve Self-Evolution</span><span class="tag" id="tag-se-prev">previous &middot;
                 round 0</span></div>
-            <div class="imgbox"><a id="lnk-se-prev" href="../images/projects/2026-rubse/qual/se_r0.png"
+            <div class="imgbox"><a id="lnk-se-prev" href="/images/projects/2026-rubse/qual/se_r0.png"
                 data-lb="Na&iuml;ve Self-Evolution"><img id="img-se-prev"
-                  src="../images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution, previous round"></a>
+                  src="/images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution, previous round"></a>
             </div>
           </div>
           <div class="pane cur">
             <div class="head"><span>Na&iuml;ve Self-Evolution</span><span class="tag" id="tag-se">round 1</span></div>
-            <div class="imgbox"><a id="lnk-se" href="../images/projects/2026-rubse/qual/se_r0.png"
+            <div class="imgbox"><a id="lnk-se" href="/images/projects/2026-rubse/qual/se_r0.png"
                 data-lb="Na&iuml;ve Self-Evolution &mdash; round 0"><img id="img-se"
-                  src="../images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution rendering"></a></div>
+                  src="/images/projects/2026-rubse/qual/se_r0.png" alt="Naive self-evolution rendering"></a></div>
           </div>
 
           <div class="pane prev">
             <div class="head"><span>RubSE (ours)</span><span class="tag" id="tag-rub-prev">previous &middot; round 0</span></div>
-            <div class="imgbox"><a id="lnk-rub-prev" href="../images/projects/2026-rubse/qual/rub_r0.png"
-                data-lb="RubSE (ours)"><img id="img-rub-prev" src="../images/projects/2026-rubse/qual/rub_r0.png"
+            <div class="imgbox"><a id="lnk-rub-prev" href="/images/projects/2026-rubse/qual/rub_r0.png"
+                data-lb="RubSE (ours)"><img id="img-rub-prev" src="/images/projects/2026-rubse/qual/rub_r0.png"
                   alt="RubSE, previous round"></a></div>
           </div>
           <div class="pane cur ours">
             <div class="head"><span>RubSE (ours)</span><span class="tag" id="tag-rub">round 1</span></div>
-            <div class="imgbox"><a id="lnk-rub" href="../images/projects/2026-rubse/qual/rub_r0.png"
-                data-lb="RubSE &mdash; round 0"><img id="img-rub" src="../images/projects/2026-rubse/qual/rub_r0.png"
+            <div class="imgbox"><a id="lnk-rub" href="/images/projects/2026-rubse/qual/rub_r0.png"
+                data-lb="RubSE &mdash; round 0"><img id="img-rub" src="/images/projects/2026-rubse/qual/rub_r0.png"
                   alt="RubSE rendering"></a></div>
           </div>
         </div>
@@ -1249,7 +1261,7 @@
       <div class="two-col">
         <div>
           <div class="fig-frame">
-            <img src="../images/projects/2026-rubse/ablation.png"
+            <img src="/images/projects/2026-rubse/ablation.png"
               alt="Ablation study on UI2Code-Real with GPT-5.2 backbone">
           </div>
           <p class="cap"><b>Ablation on UI2Code-Real</b> (GPT-5.2 backbone). Using <i>all</i> generated rubrics or a
@@ -1326,7 +1338,7 @@
         </div>
         <div>
           <div class="fig-frame">
-            <img src="../images/projects/2026-rubse/recovery.png"
+            <img src="/images/projects/2026-rubse/recovery.png"
               alt="Density of the number of rounds needed to recover from a collapse">
           </div>
           <p class="cap"><b>Rounds needed to recover.</b> For both open-source and frontier VLMs, RubSE concentrates
@@ -1341,7 +1353,7 @@
         across all three models &mdash; rubrics behave as model-agnostic visual-repair context.</p>
 
       <div class="fig fig-frame">
-        <img src="../images/projects/2026-rubse/transfer.png"
+        <img src="/images/projects/2026-rubse/transfer.png"
           alt="Applying GPT-generated rubrics to open-source VLM self-evolution">
       </div>
       <p class="cap"><b>GPT-generated rubrics vs. self-generated rubrics</b> on UI2Code-Real. Across all three Qwen
@@ -1438,7 +1450,7 @@
         completeness: 't-complete'
       };
 
-      var base = '../images/projects/2026-rubse/qual/';
+      var base = '/images/projects/2026-rubse/qual/';
       var bar = document.getElementById('rounds');
       var imgSE = document.getElementById('img-se'), lnkSE = document.getElementById('lnk-se');
       var imgRB = document.getElementById('img-rub'), lnkRB = document.getElementById('lnk-rub');
