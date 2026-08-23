@@ -15,7 +15,7 @@ Sports
 
 ### Representing Tsinghua
 
-I spent two wonderful years as a starting right-back on the Tsinghua Amateur Soccer Team, where I had the privilege of training alongside an outstanding coach and teammates. We won the **2020 Beijing University Soccer Championship** and finished as third in Beijing in 2021.
+I spent two wonderful years as a right-back on the Tsinghua Amateur Soccer Team, training under the guidance of our outstanding coach, [Prof. Qize He](https://www.thsports.tsinghua.edu.cn/info/1141/3087.htm), alongside an exceptional group of teammates. We won the **2020 Beijing University Soccer Championship** and finished as third in Beijing in 2021.
 
 In parallel, I was also a member of the **Tsinghua Amateur Long-Distance Running Team (中长跑二队)**. I won a bronze medal in the men’s 4×100m relay and another bronze in the mixed 4×400m relay at the 13th Beijing Universities Autumn Track and Field Meet.
 
@@ -54,7 +54,9 @@ I look forward to running in more places around the world and am always happy to
 
 | Date  | Event                                      | Finish Time |
 |-------|-------------------------------------------|-------------|
-| 07/22 | San Francisco Marathon (First Half)       | TBD         |
+| 07/22 | San Francisco Marathon (First Half)       | 1h39min28s   |
+| 09/04 | Mei-Zhu-Song 5k | TBD |
+| 10/04 | Hua sports half-marathon | TBD |
 | 12/06 | California International Marathon (CIM)   | TBD         |
 
 
@@ -66,43 +68,3 @@ Since I was in primary school, I has been volunteering for more than 580 hours. 
 ![](/images/misc/bj2022-small.png)
 
 
-
-<!-- | | |
-|---|---|
-| ![](/images/misc/bj2022-1.jpg) | ![](/images/misc/bj2022-2.jpg)  |
-| ![](/images/misc/bj2022-3.jpg)  | ![](/images/misc/bj2022-4.jpg)  | -->
-
-
-<!-- 
-
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-   -->
