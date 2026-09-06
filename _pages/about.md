@@ -99,6 +99,16 @@ redirect_from:
   <ul class="home-list">
     <li class="home-list__experience">
       <div class="home-list__logo">
+        <img src="files/image/meta-logo.svg" alt="Meta">
+      </div>
+      <div class="home-list__content">
+        <strong>Meta Superintelligence Labs (MSL)</strong>
+        <span class="home-list__meta">2026/06 - 2026/12</span>
+        <span class="home-list__meta">Mentors: <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a> and <a href="https://www.linkedin.com/in/seansun24">Sean Sun</a></span>
+      </div>
+    </li>
+    <li class="home-list__experience">
+      <div class="home-list__logo">
         <img src="files/image/Microsoft_logo.svg" alt="Microsoft Research">
       </div>
       <div class="home-list__content">
@@ -133,7 +143,7 @@ redirect_from:
       </div>
       <div class="home-list__content">
         <strong>Microsoft Research Asia</strong>
-        <span class="home-list__meta">2023/01 - 2023/14</span>
+        <span class="home-list__meta">2023/01 - 2023/04</span>
         <span class="home-list__meta">Mentors: <a href="https://www.microsoft.com/en-us/research/people/stevelin/">Steve Lin</a> and <a href="https://www.microsoft.com/en-us/research/people/wuzhiron/">Zhirong Wu</a></span>
       </div>
     </li>
