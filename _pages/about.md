@@ -151,6 +151,18 @@ redirect_from:
 </section>
 
 
+## Invited Talks
+
+<section class="home-section">
+  <ul class="home-list">
+    <li>
+      <strong>Multi-Crit: Benchmarking Multimodal Judges on Pluralistic Criteria-Following</strong> [<a href="/files/talks/multi-crit-invited-talk-2026.pdf">Slides</a>]
+      <span class="home-list__meta">Vector Institute, Endless Summer School: Multimodal and Foundation Models — September 10, 2026</span>
+      <span class="home-list__meta">Adobe, AI Safety &amp; Quality — June 24, 2026</span>
+    </li>
+  </ul>
+</section>
+
 <!-- **Number of visitors since January 2023:**
 
 <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter10.optistats.ovh/private/freecounterstat.php?c=rdgpxla8my1punwb2ljz5ey3sxpucw2f" border="0" title="web counter" alt="web counter"></a>  -->
