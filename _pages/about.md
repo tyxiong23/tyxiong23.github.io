@@ -60,6 +60,7 @@ redirect_from:
       <div class="home-list__content">
         <strong>Ph.D. in Computer Science, University of Maryland, College Park</strong>
         <span class="home-list__meta">2023 - Present</span>
+        <span class="home-list__meta">Master in Computer Science, 2023 - 2026</span>
       </div>
     </li>
   </ul>
