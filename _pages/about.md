@@ -26,6 +26,7 @@ redirect_from:
     <h2 id="news-title" class="home-news__title">News</h2>
   </div>
   <ul class="home-news__list">
+    <li class="home-news__item"><span class="home-news__date">09/2026</span> Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="">EAN</a>) are accepted by NeurIPS 2026.</li>
     <li class="home-news__item"><span class="home-news__date">07/2026</span> One <a href="https://openreview.net/forum?id=oHJGJS4rLD">paper</a> is accepted by COLM 2026.</li>
     <li class="home-news__item"><span class="home-news__date">06/2026</span> <a href="https://arxiv.org/abs/2606.31147">WaterGen</a> is accepted by ECCV 2026.</li>
     <li class="home-news__item"><span class="home-news__date">06/2026</span> Joined Meta MSL as a research intern with <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a>.</li>
