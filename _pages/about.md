@@ -16,7 +16,7 @@ redirect_from:
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
-<!-- <span style="color:red">I am actively seeking research internship opportunities for Summer 2026.</span> Feel free to contact me if you believe I would be a good fit! -->
+<p style="color:red">I am actively looking for 2027 summer internships. Please contact me if you believe I am a good match.</p>
 
 <!-- <b>Research Interest:</b> machine learning, computer vision and multi-modality. -->
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
@@ -26,6 +26,7 @@ redirect_from:
     <h2 id="news-title" class="home-news__title">News</h2>
   </div>
   <ul class="home-news__list">
+    <li class="home-news__item"><span class="home-news__date">10/2026</span> <a href="/rubse/"><strong>RubSE</strong></a> has been accepted to the NeurIPS’26 LCFM Workshop.</li>
     <li class="home-news__item"><span class="home-news__date">09/2026</span> Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="">EAN</a>) are accepted by NeurIPS 2026.</li>
     <li class="home-news__item"><span class="home-news__date">07/2026</span> One <a href="https://openreview.net/forum?id=oHJGJS4rLD">paper</a> is accepted by COLM 2026.</li>
     <li class="home-news__item"><span class="home-news__date">06/2026</span> <a href="https://arxiv.org/abs/2606.31147">WaterGen</a> is accepted by ECCV 2026.</li>
