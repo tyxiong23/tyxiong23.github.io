@@ -8,15 +8,23 @@ redirect_from:
   - /about.html
 ---
 
-<p>Hi, I am Tianyi Xiong, a Ph.D. student at the University of Maryland, College Park.</p>
+<div class="home-intro">
+  <p class="home-intro__role">Ph.D. student · University of Maryland, College Park</p>
 
-<p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
+  <p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
+
+  <div class="home-intro__links" aria-label="Research and contact links">
+    <a href="/publications/">Selected publications <span aria-hidden="true">↗</span></a>
+    <a href="/files/CV_Tianyi_Xiong_latest.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
+    <a href="mailto:txiong23@umd.edu">Get in touch <span aria-hidden="true">↗</span></a>
+  </div>
+</div>
 
 <!-- <p>If you are interested in collaborations or would like to learn more about my work, feel free to contact me! 😄</p> -->
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
-<p style="color:red">I am actively looking for 2027 summer internships. Please contact me if you believe I am a good match! 😄</p>
+<p class="home-availability"><strong>Summer 2027</strong> I am looking for research internships. <a href="mailto:txiong23@umd.edu">Let’s connect.</a></p>
 
 <!-- <b>Research Interest:</b> machine learning, computer vision and multi-modality. -->
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->
@@ -26,22 +34,27 @@ redirect_from:
     <h2 id="news-title" class="home-news__title">News</h2>
   </div>
   <ul class="home-news__list">
-    <li class="home-news__item"><span class="home-news__date">10/2026</span> <a href="/rubse/"><strong>RubSE</strong></a> has been accepted to the NeurIPS’26 LCFM Workshop.</li>
-    <li class="home-news__item"><span class="home-news__date">09/2026</span> Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="">EAN</a>) are accepted by NeurIPS 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">07/2026</span> One <a href="https://openreview.net/forum?id=oHJGJS4rLD">paper</a> is accepted by COLM 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">06/2026</span> <a href="https://arxiv.org/abs/2606.31147">WaterGen</a> is accepted by ECCV 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">06/2026</span> Joined Meta MSL as a research intern with <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a>.</li>
-    <li class="home-news__item"><span class="home-news__date">05/2026</span> Receive the <b>Silver Reviewer Award</b> from ICML 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">04/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> is selected as a <span style="color:red"><strong>Highlight</strong></span> paper at CVPR 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">02/2026</span> <a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><strong>PhyCritic</strong></a> got accepted by CVPR 2026.</li>
-    <li class="home-news__item"><span class="home-news__date">02/2025</span> <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><strong>LLaVA-Critic</strong></a> got accepted by CVPR 2025.</li>
-    <li class="home-news__item"><span class="home-news__date">02/2025</span> Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.</li>
-    <li class="home-news__item"><span class="home-news__date">09/2024</span> Released <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><strong>LLaVA-Critic</strong></a>, the first open-source LMM as a general evaluator for diverse multimodal scenarios.</li>
-    <li class="home-news__item"><span class="home-news__date">09/2024</span> <a href="https://arxiv.org/abs/2406.02972"><strong>Event3DGS</strong></a> got accepted by CoRL 2024.</li>
-    <li class="home-news__item"><span class="home-news__date">06/2024</span> Joined ByteDance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.</li>
-    <li class="home-news__item"><span class="home-news__date">08/2023</span> Started my Ph.D. at UMD.</li>
-    <li class="home-news__item"><span class="home-news__date">07/2023</span> <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_MasQCLIP_for_Open-Vocabulary_Universal_Image_Segmentation_ICCV_2023_paper.html"><strong>MasQCLIP</strong></a> got accepted by ICCV 2023.</li>
+    <li class="home-news__item"><span class="home-news__date">10/2026</span> <span class="home-news__text"><a href="/rubse/"><strong>RubSE</strong></a> has been accepted to the NeurIPS’26 LCFM Workshop.</span></li>
+    <li class="home-news__item"><span class="home-news__date">09/2026</span> <span class="home-news__text">Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="">EAN</a>) are accepted by NeurIPS 2026.</span></li>
+    <li class="home-news__item"><span class="home-news__date">07/2026</span> <span class="home-news__text">One <a href="https://openreview.net/forum?id=oHJGJS4rLD">paper</a> is accepted by COLM 2026.</span></li>
+    <li class="home-news__item"><span class="home-news__date">06/2026</span> <span class="home-news__text"><a href="https://arxiv.org/abs/2606.31147">WaterGen</a> is accepted by ECCV 2026.</span></li>
+    <li class="home-news__item"><span class="home-news__date">06/2026</span> <span class="home-news__text">Joined Meta MSL as a research intern with <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a>.</span></li>
   </ul>
+  <details class="home-news__archive">
+    <summary>Earlier updates</summary>
+    <ul class="home-news__list">
+      <li class="home-news__item"><span class="home-news__date">05/2026</span> <span class="home-news__text">Receive the <b>Silver Reviewer Award</b> from ICML 2026.</span></li>
+      <li class="home-news__item"><span class="home-news__date">04/2026</span> <span class="home-news__text"><a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> is selected as a <strong class="text-accent">Highlight</strong> paper at CVPR 2026.</span></li>
+      <li class="home-news__item"><span class="home-news__date">02/2026</span> <span class="home-news__text"><a href="https://multi-crit.github.io/"><strong>Multi-Crit</strong></a> and <a href="https://research.nvidia.com/labs/lpr/phycritic/"><strong>PhyCritic</strong></a> got accepted by CVPR 2026.</span></li>
+      <li class="home-news__item"><span class="home-news__date">02/2025</span> <span class="home-news__text"><a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><strong>LLaVA-Critic</strong></a> got accepted by CVPR 2025.</span></li>
+      <li class="home-news__item"><span class="home-news__date">02/2025</span> <span class="home-news__text">Joined NVIDIA LPR as a research intern with <a href="https://research.nvidia.com/person/zhiding-yu">Zhiding Yu</a>, <a href="https://liuguilin1225.github.io/">Guilin Liu</a> and <a href="https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en">Yi Dong</a>.</span></li>
+      <li class="home-news__item"><span class="home-news__date">09/2024</span> <span class="home-news__text">Released <a href="https://llava-vl.github.io/blog/2024-10-03-llava-critic/"><strong>LLaVA-Critic</strong></a>, the first open-source LMM as a general evaluator for diverse multimodal scenarios.</span></li>
+      <li class="home-news__item"><span class="home-news__date">09/2024</span> <span class="home-news__text"><a href="https://arxiv.org/abs/2406.02972"><strong>Event3DGS</strong></a> got accepted by CoRL 2024.</span></li>
+      <li class="home-news__item"><span class="home-news__date">06/2024</span> <span class="home-news__text">Joined ByteDance as a research intern with <a href="https://chunyuan.li/">Chunyuan Li</a>.</span></li>
+      <li class="home-news__item"><span class="home-news__date">08/2023</span> <span class="home-news__text">Started my Ph.D. at UMD.</span></li>
+      <li class="home-news__item"><span class="home-news__date">07/2023</span> <span class="home-news__text"><a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_MasQCLIP_for_Open-Vocabulary_Universal_Image_Segmentation_ICCV_2023_paper.html"><strong>MasQCLIP</strong></a> got accepted by ICCV 2023.</span></li>
+    </ul>
+  </details>
 </section>
 <!-- [07/2023] <b>Automatic Generation of Commercial Systems</b> got accepted by ACM MM23. -->
 

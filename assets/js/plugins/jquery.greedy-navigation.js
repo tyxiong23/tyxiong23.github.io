@@ -45,6 +45,7 @@ function updateNav() {
     if(breaks.length < 1) {
       $btn.addClass('hidden');
       $hlinks.addClass('hidden');
+      $btn.attr('aria-expanded', 'false').removeClass('close');
     }
   }
 
@@ -67,6 +68,14 @@ $(window).resize(function() {
 $btn.on('click', function() {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  $(this).attr('aria-expanded', !$hlinks.hasClass('hidden'));
+});
+
+$nav.on('keydown', function(event) {
+  if(event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close').attr('aria-expanded', 'false').focus();
+  }
 });
 
 updateNav();

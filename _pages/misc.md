@@ -10,8 +10,7 @@ author_profile: true
 
 Outside research and studying, I am a huge fan of sports, especially soccer, track & field and Formula One. I also enjoy a variety of hobbies, including playing the piano, volunteering, and being a vlogger. **Subscribe me on [Bilibili](https://space.bilibili.com/26738853)!**
 
-Sports
-======
+## Sports
 
 ### Representing Tsinghua
 
@@ -45,8 +44,9 @@ In 2025, I completed my first full marathon at the Marine Corps Marathon with a 
 | 800m | 2:04.30 | Oct 2021 · 13th Beijing Universities Autumn Track and Field Meet |
 | 5km | 18:12 | Dec 2020 · Yongding River Relay |
 | 10km | 39:32 | Apr 2021 · Tsinghua Campus Marathon 10K |
-| Half Marathon | 1:35:22 | Mar 2026 · Rock & Roll DC |
+| Half Marathon | 1:30:58 | Oct 2026 · Hua Sports Half Marathon |
 | Marathon | 3:25:59 | Oct 2025 · Marine Corps Marathon |
+{:.running-records}
 
 #### Races in 2026
 
@@ -55,15 +55,15 @@ I look forward to running in more places around the world and am always happy to
 | Date  | Event                                      | Finish Time |
 |-------|-------------------------------------------|-------------|
 | 07/22 | San Francisco Marathon (First Half)       | 1h39min28s   |
-| 09/04 | Mei-Zhu-Song 5k | TBD |
-| 10/04 | Hua sports half-marathon | TBD |
+| 09/04 | Mei-Zhu-Song 5K | 20min22s |
+| 10/04 | Hua Sports Half Marathon | 1h30min58s |
 | 12/06 | California International Marathon (CIM)   | TBD         |
+{:.race-log}
 
 
 
 
-Volunteering
-======
+## Volunteering
 Since I was in primary school, I has been volunteering for more than 580 hours. During high school, I served as a volunteer tour guide at the beautiful [Former Residence of Soong Ching-ling](http://www.sql.org.cn/). I was privileged to be a doping control chaperone at Yanqing Sliding Center for Beijing 2022 Winter Olympics. Here are some photos!
 ![](/images/misc/bj2022-small.png)
 
