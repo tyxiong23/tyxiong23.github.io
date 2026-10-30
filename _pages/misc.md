@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Misc"
+compact_title: true
 permalink: /misc/
 author_profile: true
 ---

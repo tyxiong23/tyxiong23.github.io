@@ -6,7 +6,7 @@
       <nav id="site-nav" class="greedy-nav" aria-label="Main navigation">
         <button type="button" aria-label="More navigation links" aria-controls="navigation-overflow" aria-expanded="false"><span class="navicon" aria-hidden="true"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.name }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.name }}{% if site.name_zh %}<span class="masthead__name-zh" lang="zh-Hans">{{ site.name_zh }}</span>{% endif %}</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}

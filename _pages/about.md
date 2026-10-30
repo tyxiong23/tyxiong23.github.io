@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Tianyi Xiong (熊天翼)"
+hide_title: true
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -12,19 +13,13 @@ redirect_from:
   <p class="home-intro__role">Ph.D. student · University of Maryland, College Park</p>
 
   <p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
-
-  <div class="home-intro__links" aria-label="Research and contact links">
-    <a href="/publications/">Selected publications <span aria-hidden="true">↗</span></a>
-    <a href="/files/CV_Tianyi_Xiong_latest.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
-    <a href="mailto:txiong23@umd.edu">Get in touch <span aria-hidden="true">↗</span></a>
-  </div>
 </div>
 
 <!-- <p>If you are interested in collaborations or would like to learn more about my work, feel free to contact me! 😄</p> -->
 
 <!-- Previously, I obtained my B.Eng. degree in Computer Science with a minor in Statistics at Tsinghua University, where I was fortunate to work with [Zhuowen Tu](https://pages.ucsd.edu/~ztu/) (at UCSD remotely) and [Songhai Zhang](https://www.cs.tsinghua.edu.cn/csen/info/1214/4073.htm). I previously interned at NVIDIA (with [Zhiding Yu](https://scholar.google.com/citations?user=1VI_oYUAAAAJ&hl=en), [Guilin Liu](https://liuguilin1225.github.io/) and [Yi Dong](https://scholar.google.com/citations?user=DwfBGvgAAAAJ&hl=en)), ByteDance (with [Chunyuan Li](https://chunyuan.li/)) and MSRA (with [Steve Lin](https://www.microsoft.com/en-us/research/people/stevelin/) and [Zhirong Wu](https://www.microsoft.com/en-us/research/people/wuzhiron/)). -->
 
-<p class="home-availability"><strong>Summer 2027</strong> I am looking for research internships. <a href="mailto:txiong23@umd.edu">Let’s connect.</a></p>
+<p class="home-availability">I am actively looking for 2027 summer internships. Please contact me if you believe I am a good match! 😄</p>
 
 <!-- <b>Research Interest:</b> machine learning, computer vision and multi-modality. -->
 <!-- I am especially interested in adapting vision models into the open world with the general knowledge learnt jointly from other modalities.  -->

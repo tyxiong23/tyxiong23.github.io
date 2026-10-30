@@ -1,4 +1,4 @@
-/* A quiet, editorial theme: warm paper, ink blue, and clear typography. */
+/* White pages, black text, and a soft blue-gray navigation bar. */
 
 body {
   background: $background-color;
@@ -27,9 +27,7 @@ summary:focus-visible {
 .masthead {
   position: sticky;
   top: 0;
-  background: rgba(250, 249, 246, 0.96);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  background: $masthead-background-color;
   border-bottom: 1px solid $border-color;
 
   &__inner-wrap {
@@ -46,6 +44,13 @@ summary:focus-visible {
     font-size: 1rem;
     letter-spacing: -0.03em;
   }
+}
+
+.masthead__name-zh {
+  margin-left: 0.5em;
+  font-size: 0.86em;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .greedy-nav {
@@ -76,6 +81,10 @@ summary:focus-visible {
 
   .masthead__menu-item--lg a::before {
     display: none;
+  }
+
+  .masthead__menu-item--lg a {
+    color: $text-color;
   }
 
   button {
@@ -127,12 +136,17 @@ summary:focus-visible {
 
 .page__title {
   margin-bottom: 1rem;
-  color: #1d3049;
+  color: $text-color;
   font-family: $serif;
   font-size: clamp(2rem, 4.5vw, 2.85rem);
   font-weight: 400;
   line-height: 1.18;
   letter-spacing: -0.045em;
+}
+
+.page__title.page__title--compact {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  letter-spacing: -0.035em;
 }
 
 .page__content {
@@ -141,7 +155,7 @@ summary:focus-visible {
     margin-bottom: 1rem;
     padding-bottom: 0.65rem;
     border-bottom: 1px solid $border-color;
-    color: #1d3049;
+    color: $text-color;
     font-family: $serif;
     font-size: 1.4rem;
     font-weight: 400;
@@ -206,7 +220,7 @@ summary:focus-visible {
 }
 
 .sidebar .author__name {
-  color: #1d3049;
+  color: $text-color;
   font-size: 1.1rem;
   letter-spacing: -0.025em;
 }
@@ -270,28 +284,6 @@ summary:focus-visible {
   }
 }
 
-.home-intro__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  margin: 1.25rem 0 1.5rem;
-
-  a {
-    padding: 0.2rem 0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  span {
-    margin-left: 0.2rem;
-  }
-}
-
 .page__content .home-availability {
   margin-bottom: 2.2rem;
   padding: 0.85rem 1rem;
@@ -299,11 +291,6 @@ summary:focus-visible {
   border-radius: 0 6px 6px 0;
   background: $accent-background-color;
   font-size: 0.83rem;
-
-  strong {
-    margin-right: 0.5rem;
-    color: $primary-color;
-  }
 }
 
 .text-accent {
@@ -458,7 +445,7 @@ summary:focus-visible {
   > h2 {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $border-color;
-    color: #1d3049;
+    color: $text-color;
     font-family: $serif;
     font-size: 1.5rem;
     font-weight: 400;
