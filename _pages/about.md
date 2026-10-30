@@ -30,7 +30,7 @@ redirect_from:
   </div>
   <ul class="home-news__list">
     <li class="home-news__item"><span class="home-news__date">10/2026</span> <span class="home-news__text"><a href="/rubse/"><strong>RubSE</strong></a> has been accepted to the NeurIPS’26 LCFM Workshop.</span></li>
-    <li class="home-news__item"><span class="home-news__date">09/2026</span> <span class="home-news__text">Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="">EAN</a>) are accepted by NeurIPS 2026.</span></li>
+    <li class="home-news__item"><span class="home-news__date">09/2026</span> <span class="home-news__text">Three papers (<a href="https://openreview.net/forum?id=oHJGJS4rLD">AutoTTS</a>, <a href="https://openreview.net/forum?id=oHJGJS4rLD">MARGO</a> and <a href="https://arxiv.org/abs/2610.39237">EVAN</a>) are accepted by NeurIPS 2026.</span></li>
     <li class="home-news__item"><span class="home-news__date">07/2026</span> <span class="home-news__text">One <a href="https://openreview.net/forum?id=oHJGJS4rLD">paper</a> is accepted by COLM 2026.</span></li>
     <li class="home-news__item"><span class="home-news__date">06/2026</span> <span class="home-news__text"><a href="https://arxiv.org/abs/2606.31147">WaterGen</a> is accepted by ECCV 2026.</span></li>
     <li class="home-news__item"><span class="home-news__date">06/2026</span> <span class="home-news__text">Joined Meta MSL as a research intern with <a href="https://scholar.google.com/citations?user=9xCznRcAAAAJ&hl=en">Annie Dong</a>.</span></li>
