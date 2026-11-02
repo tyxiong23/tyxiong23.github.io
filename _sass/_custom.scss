@@ -284,6 +284,20 @@ summary:focus-visible {
   }
 }
 
+.page__content .home-research__directions {
+  margin: 0 0 1.25rem;
+  padding-left: 1.1rem;
+
+  li {
+    margin-bottom: 0.55rem;
+    line-height: 1.65;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .page__content .home-availability {
   margin-bottom: 2.2rem;
   padding: 0.85rem 1rem;

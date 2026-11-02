@@ -12,7 +12,14 @@ redirect_from:
 <div class="home-intro">
   <p class="home-intro__role">Ph.D. student · University of Maryland, College Park</p>
 
-  <p>My research focuses on computer vision and multimodal foundation models, especially strong critic and reasoning capabilities, multimodal alignment, and RL-based post-training methods.</p>
+  <div class="home-research">
+    <p>My research focuses on building multimodal models that can evaluate, learn from feedback, and continually improve themselves.</p>
+    <ul class="home-research__directions">
+      <li><strong>Critic and reward modeling:</strong> I build and benchmark multimodal judges for reliable evaluation and alignment across diverse criteria and physical reasoning tasks (<a href="https://arxiv.org/abs/2410.02712">LLaVA-Critic</a>, <a href="https://arxiv.org/abs/2511.21662">Multi-Crit</a>, <a href="https://arxiv.org/abs/2602.11124">PhyCritic</a>).</li>
+      <li><strong>Multimodal post-training:</strong> I study how reinforcement learning connects critic supervision, visual grounding, and stronger reasoning and generation (<a href="https://arxiv.org/abs/2509.00676">LLaVA-Critic-R1</a>, <a href="https://arxiv.org/abs/2610.39237">EVAN</a>).</li>
+      <li><strong>Recursive self-improvement:</strong> I explore feedback loops that let models iteratively refine their outputs and discover better inference strategies, toward systems that can improve their own capabilities (<a href="https://arxiv.org/abs/2608.24138">RubSE</a>, <a href="https://arxiv.org/abs/2605.08083">AutoTTS</a>).</li>
+    </ul>
+  </div>
 </div>
 
 <!-- <p>If you are interested in collaborations or would like to learn more about my work, feel free to contact me! 😄</p> -->
