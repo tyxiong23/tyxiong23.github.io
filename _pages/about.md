@@ -10,7 +10,8 @@ redirect_from:
 ---
 
 <div class="home-intro">
-  <p class="home-intro__role">Ph.D. student · University of Maryland, College Park</p>
+  <p class="home-intro__role">I am a fourth-year Ph.D. student at the University of Maryland, College Park, advised by Prof. Ramani Duraiswami. I work on multimodal foundation models and recursive self-improvement.</p>
+  <p>I received my B.Eng. in Computer Science from Tsinghua University, with a minor in Statistics. I have interned at Meta Superintelligence Labs, Microsoft Research, NVIDIA Research, ByteDance Seed, and Microsoft Research Asia.</p>
 
   <div class="home-research">
     <p>My research focuses on building multimodal models that can evaluate, learn from feedback, and continually improve themselves.</p>
