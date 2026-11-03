@@ -10,14 +10,13 @@ redirect_from:
 ---
 
 <div class="home-intro">
-  <p class="home-intro__role">I am a fourth-year Ph.D. student at the University of Maryland, College Park, advised by Prof. Ramani Duraiswami. I work on multimodal foundation models and recursive self-improvement.</p>
-  <p>I received my B.Eng. in Computer Science from Tsinghua University, with a minor in Statistics. I have interned at Meta Superintelligence Labs, Microsoft Research, NVIDIA Research, ByteDance Seed, and Microsoft Research Asia.</p>
+  <p class="home-intro__role">I am a fourth-year Ph.D. student at the University of Maryland, College Park, advised by Prof. Ramani Duraiswami. I received my B.Eng. in Computer Science from Tsinghua University, with a minor in Statistics. I have interned at Meta Superintelligence Labs, Microsoft Research, NVIDIA Research, ByteDance Seed, and Microsoft Research Asia.</p>
 
   <div class="home-research">
     <p>My research focuses on building multimodal models that can evaluate, learn from feedback, and continually improve themselves.</p>
     <ul class="home-research__directions">
       <li><strong>Critic and reward modeling:</strong> I build and benchmark multimodal judges for reliable evaluation and alignment across diverse criteria and physical reasoning tasks (<a href="https://arxiv.org/abs/2410.02712">LLaVA-Critic</a>, <a href="https://arxiv.org/abs/2511.21662">Multi-Crit</a>, <a href="https://arxiv.org/abs/2602.11124">PhyCritic</a>).</li>
-      <li><strong>Multimodal post-training:</strong> I study how reinforcement learning connects critic supervision, visual grounding, and stronger reasoning and generation (<a href="https://arxiv.org/abs/2509.00676">LLaVA-Critic-R1</a>, <a href="https://arxiv.org/abs/2610.39237">EVAN</a>).</li>
+      <li><strong>Multimodal post-training:</strong> I study data selection and reinforcement learning for stronger multimodal reasoning and generation, with an emphasis on critic supervision and visual grounding (<a href="https://arxiv.org/abs/2402.12501">Self-Filter</a>, <a href="https://arxiv.org/abs/2509.00676">LLaVA-Critic-R1</a>, <a href="https://arxiv.org/abs/2610.39237">EVAN</a>).</li>
       <li><strong>Recursive self-improvement:</strong> I explore feedback loops that let models iteratively refine their outputs and discover better inference strategies, toward systems that can improve their own capabilities (<a href="https://arxiv.org/abs/2608.24138">RubSE</a>, <a href="https://arxiv.org/abs/2605.08083">AutoTTS</a>).</li>
     </ul>
   </div>
